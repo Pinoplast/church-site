@@ -1,0 +1,34 @@
+.top-sl .hero-unit h1 {
+  font-size: 48px;
+}
+
+.top-sl .hero-unit p {
+  margin-bottom: 20px;
+}
+
+.top-sl .badge-icon-group {
+  float: none;
+  margin-bottom: 20px;
+}
+
+.badge-icon-group .badge-icon {
+  background-color: #096;
+  border: 0;
+  float: none;
+}
+
+.badge-icon-group .badge-icon a {
+  color: #fff;
+  font-size: 24px;
+}
+
+.badge-icon-group .badge-icon small strong {
+  opacity: 0.6;
+}
+
+.badge-icon-group .badge-icon small {
+  color: #fff;
+  text-transform: none;
+  font-size: 16px;
+  opacity: 1;
+}

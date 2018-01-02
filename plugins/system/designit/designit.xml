@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="system" method="upgrade">
+	<name>plg_system_designit</name>
+	<author>JoomlArt</author>
+	<creationDate>May 2016</creationDate>
+	<copyright>Copyright (C) 2005 - 2016 JoomlArt.com. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>admin@joomlart.com</authorEmail>
+	<authorUrl>www.joomlart.com</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_DESIGNIT_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="designit">designit.php</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_designit.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_designit.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="app_id" type="text"
+					description="PLG_DESIGNIT_APPID_DESC"
+					label="PLG_DESIGNIT_APPID_LABEL"
+					default=""
+				/>
+				<field name="height" type="text"
+					description="PLG_DESIGNIT_HEIGHT_DESC"
+					label="PLG_DESIGNIT_HEIGHT_LABEL"
+					default="100"
+				/>
+				<field name="width" type="text"
+					description="PLG_DESIGNIT_WIDTH_DESC"
+					label="PLG_DESIGNIT_WIDTH_LABEL"
+					default="100"
+				/>
+				<field name="access" type="accesslevel"
+					description="JFIELD_ACCESS_DESC"
+					label="JFIELD_ACCESS_LABEL"
+					size="1" default="3"
+				/>
+				<field name="uploadimage" class="btn-group btn-group-yesno" type="radio"
+					description="JFIELD_UPLOAD_DESC"
+					label="JFIELD_UPLOAD_LABEL"
+					size="1" default="0"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
