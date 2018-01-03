@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="3.4" client="site" method="upgrade">
+	<name>MOD_SERMONUPLOAD</name>
+	<author>Thomas Hunziker</author>
+	<creationDate>2017-09-25</creationDate>
+	<copyright>© 2017</copyright>
+	<authorEmail>admin@sermonspeaker.net</authorEmail>
+	<authorUrl>http://www.sermonspeaker.net</authorUrl>
+	<version>1.0.1</version>
+	<license>http://www.gnu.org/licenses/gpl.html</license>
+	<description>MOD_SERMONUPLOAD_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_sermonupload">mod_sermonupload.php</filename>
+		<filename>mod_sermonupload.xml</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+	</files>
+	<updateservers>
+		<server type="extension" priority="1" name="SermonSpeaker.net">http://www.sermonspeaker.net/update/mod_sermonupload.xml</server>
+	</updateservers>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="types"
+					type="list"
+					label="MOD_SERMONUPLOAD_FIELD_TYPES_LABEL"
+					description="MOD_SERMONUPLOAD_FIELD_TYPES_DESC"
+					multiple="true"
+					>
+					<option value="audio">MOD_SERMONUPLOAD_FIELD_TYPES_OPTION_AUDIO</option>
+					<option value="video">MOD_SERMONUPLOAD_FIELD_TYPES_OPTION_VIDEO</option>
+					<option value="addfile">MOD_SERMONUPLOAD_FIELD_TYPES_OPTION_ADDFILE</option>
+				</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field name="moduleclass_sfx" type="textarea"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+					rows="3" />
+				<field name="cache" type="list"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC"
+					default="1">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC"
+					default="900" />
+				<field name="cachemode" type="hidden"
+					default="static"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

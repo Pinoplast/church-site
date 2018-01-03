@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="3.4" client="site" method="upgrade">
+	<name>SermonCast</name>
+	<author>Thomas Hunziker, Martin Hess</author>
+	<creationDate>2016-09-30</creationDate>
+	<copyright>© 2017</copyright>
+	<authorEmail>admin@sermonspeaker.net</authorEmail>
+	<authorUrl>http://www.sermonspeaker.net</authorUrl>
+	<version>5.3.2</version>
+	<license>http://www.gnu.org/licenses/gpl.html</license>
+	<description>MOD_SERMONCAST_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_sermoncast">mod_sermoncast.php</filename>
+		<filename>mod_sermoncast.xml</filename>
+		<filename>podcast-mini.gif</filename>
+		<filename>feed_rss.gif</filename>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+	</files>
+	<updateservers>
+		<server type="extension" priority="1" name="SermonSpeaker.net">http://www.sermonspeaker.net/update/mod_sermoncast.xml</server>
+	</updateservers>
+	<config>
+		<fields name="params">
+			<fieldset name="basic"
+				addfieldpath="/administrator/components/com_content/models/fields">
+				<field name="sc_introtext" type="text"
+					default="" 
+					label="MOD_SERMONCAST_PARAM_INTROTEXT" 
+					description="MOD_SERMONCAST_PARAM_INTROTEXT_DESC" />
+				<field type="spacer" />
+				<field name="sc_menuitem" type="menuitem" 
+					label="MOD_SERMONCAST_PARAM_MENUITEM" 
+					description="MOD_SERMONCAST_PARAM_MENUITEM_DESC" />
+				<field name="sc_type" type="list" 
+					label="MOD_SERMONCAST_FIELD_TYPE_LABEL" 
+					description="MOD_SERMONCAST_FIELD_TYPE_DESC"
+					default="">
+					<option value="">Auto</option>
+					<option value="audio">Audio</option>
+					<option value="video">Video</option>
+				</field>
+				<field type="spacer" />
+				<field
+					name="sc_showpcast"
+					type="radio"
+					label="MOD_SERMONCAST_PARAM_SHOWPCAST"
+					description="MOD_SERMONCAST_PARAM_SHOWPCAST_DESC"
+					class="btn-group btn-group-yesno"
+					default="1"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="logo"
+					type="imagelist"
+					label="MOD_SERMONCAST_FIELD_LOGO_LABEL"
+					description="MOD_SERMONCAST_FIELD_LOGO_DESC"
+					directory="media/com_sermonspeaker/logo"
+					hide_none="true"
+					showon="sc_showpcast:1"
+				/>
+				<field
+					name="sc_otherimage"
+					type="text"
+					label="MOD_SERMONCAST_PARAM_OTHERIMAGE"
+					description="MOD_SERMONCAST_PARAM_OTHERIMAGE_DESC"
+					default=""
+					showon="sc_showpcast:1"
+				/>
+				<field
+					name="sc_pcast_prefix"
+					type="list"
+					label="MOD_SERMONCAST_PARAM_PCAST_PREFIX"
+					description="MOD_SERMONCAST_PARAM_PCAST_PREFIX_DESC"
+					default="itpc"
+					showon="sc_showpcast:1"
+					>
+					<option value="http">http://</option>
+					<option value="itpc">itpc://</option>
+					<option value="pcast">pcast://</option>
+				</field>
+				<field
+					name="sc_otherlink"
+					type="text"
+					label="MOD_SERMONCAST_PARAM_OTHERLINK"
+					description="MOD_SERMONCAST_PARAM_OTHERLINK_DESC"
+					default=""
+					showon="sc_showpcast:1"
+				/>
+				<field
+					name="sc_otherimage"
+					type="text"
+					label="MOD_SERMONCAST_PARAM_OTHERIMAGE"
+					description="MOD_SERMONCAST_PARAM_OTHERIMAGE_DESC"
+					default=""
+					showon="sc_showpcast:1"
+				/>
+				<field type="spacer" />
+				<field name="sc_showplink" type="radio"
+					default="1"
+					class="btn-group btn-group-yesno"
+					label="MOD_SERMONCAST_PARAM_SHOWPLINK"
+					description="MOD_SERMONCAST_PARAM_SHOWPLINK_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field type="spacer" />
+				<field name="sc_showhelp" type="radio"
+					default="0"
+					class="btn-group btn-group-yesno"
+					label="MOD_SERMONCAST_PARAM_SHOWHELP"
+					description="MOD_SERMONCAST_PARAM_SHOWHELP_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="sc_helpcontent"
+					type="modal_article"
+					label="MOD_SERMONCAST_PARAM_HELPCONTENT"
+					description="MOD_SERMONCAST_PARAM_HELPCONTENT_DESC"
+					default="0"
+					showon="sc_showhelp:1"
+				/>
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout"
+					   label="JFIELD_ALT_LAYOUT_LABEL"
+					   description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+					   default="_:default" />
+				<field name="moduleclass_sfx" type="textarea"
+					   label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					   description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+					   rows="3" />
+				<field name="cache" type="list"
+					   label="COM_MODULES_FIELD_CACHING_LABEL"
+					   description="COM_MODULES_FIELD_CACHING_DESC"
+					   default="1">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text"
+					   label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					   description="COM_MODULES_FIELD_CACHE_TIME_DESC"
+					   default="900" />
+				<field name="cachemode" type="hidden"
+					   default="static"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

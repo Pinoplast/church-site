@@ -1,0 +1,87 @@
+.intend{
+	margin-left:13em;
+}
+.pointer{
+	cursor:pointer;
+}
+#upload-noflash {
+	border: 1px solid grey;
+	padding: 5px;
+}
+.scripture{
+	background-color:#CF9 !important;
+	border-radius:5px;
+	padding-left:5px;
+}
+.scriptureold{
+	background-color:#FF997F !important;
+	border-radius:5px;
+	padding-left:5px;
+}
+
+/* Plupload */
+.filelist {
+	margin: 5px 0 0 0;
+}
+.filelist .alert {
+	padding: 5px;
+	margin-bottom: 2px;
+}
+.filelist .alert .close {
+	right: 0;
+}
+.drop-area {
+	border: 1px dashed #a9a9a9;
+	border-radius: 4px;
+	background-color: #f5f5f5;
+	margin: -5px 0 -5px -5px;
+	padding: 5px 0 5px 5px;
+}
+
+.pathinfo{
+	font-size:small;
+	background-color:#E5FFFF;
+	border-radius:5px;
+	padding-left:5px;
+	display:inline-block;
+}
+.ss-hide{
+	display:none;
+}
+
+/* SermonUpload Module */
+.sermonupload .drop-area {
+	margin: 0 0 5px 0;
+	padding: 9px;
+}
+.sermonupload .filelist {
+	font-size: 75%;
+}
+.sermonupload .upload-header {
+	font-size: 11px;
+	font-weight: bold;
+	color: #999;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+	text-transform: uppercase;
+}
+
+/* Joomla 3.0 stuff */
+/* Fixing input-append */
+.input-append .chzn-container-single .chzn-single {
+	border-color: #ccc;
+	height: 26px;
+	-webkit-border-radius: 3px 0 0 3px;
+	-moz-border-radius: 3px 0 0 3px;
+	border-radius: 3px 0 0 3px;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.input-append .chzn-container-active .chzn-single-with-drop {
+	-webkit-border-radius: 3px 0 0 3px;
+	-moz-border-radius: 3px 0 0 3px;
+	border-radius: 3px 0 0 3px;
+}
+.input-append .chzn-container-single .chzn-drop {
+	border-color: #ccc;
+}

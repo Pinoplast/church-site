@@ -1,0 +1,170 @@
+/** header icons **/
+.icon-48-speakers		{ background-image: url(images/speakers.png); }
+.icon-48-series			{ background-image: url(images/series.png); }
+.icon-48-sermons		{ background-image: url(images/sermon.png); }
+.icon-48-tags			{ background-image: url(images/tags.png); }
+.icon-48-statistics		{ background-image: url(images/stats.png); }
+.icon-48-sermonhelp		{ background-image: url(images/help.png); }
+.icon-48-tools			{ background-image: url(images/tools.png); }
+
+.clr{
+	clear:both;
+}
+.ss-hide{
+	display:none;
+}
+.pointer{
+	cursor:pointer;
+}
+.intend{
+	clear:left;
+}
+
+/* Plupload */
+.filelist {
+	margin: 5px 0 0 0;
+}
+.filelist .alert {
+	padding: 5px;
+	margin-bottom: 2px;
+}
+.filelist .alert .close {
+	right: 0;
+}
+.drop-area {
+	border: 1px dashed #a9a9a9;
+	border-radius: 4px;
+	background-color: #f5f5f5;
+	margin: -5px 0 -5px -5px;
+	padding: 5px 0 5px 5px;
+}
+
+/* Setting the max-width of the speaker and series filterfield */
+#filter_series, #filter_speaker{
+	max-width: 16em;
+}
+
+.scripture{
+	background-color:#CF9 !important;
+	border-radius:5px;
+	padding-left:5px;
+}
+.scriptureold{
+	background-color:#FF997F !important;
+	border-radius:5px;
+	padding-left:5px;
+}
+
+.pathinfo {
+	font-size: small;
+	background-color: #E5FFFF;
+	border-radius: 5px;
+	padding: 1px 5px;
+	display: inline-block;
+}
+.ss-hide{
+	display:none;
+}
+
+.icon.inactive a{
+	background-color:#F4F4F4 !important;
+}
+
+.tip-wrap{
+    z-index: 15;
+}
+
+/* Joomla 3.0 stuff */
+/* Fixing input-append */
+.input-append .chzn-container-single .chzn-single {
+	border-color: #ccc;
+	height: 26px;
+	-webkit-border-radius: 3px 0 0 3px;
+	-moz-border-radius: 3px 0 0 3px;
+	border-radius: 3px 0 0 3px;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.input-append .chzn-container-active .chzn-single-with-drop {
+	-webkit-border-radius: 3px 0 0 3px;
+	-moz-border-radius: 3px 0 0 3px;
+	border-radius: 3px 0 0 3px;
+}
+.input-append .chzn-container-single .chzn-drop {
+	border-color: #ccc;
+}
+/* Progress bar in J2.5 */
+table.adminlist div.progress{
+	width:100%;
+	padding:2px;
+	background-color:white;
+	border:1px solid black;
+	color:black;
+	text-align:center;
+}
+table.adminlist div.progress div.bar{
+	background-color:CornFlowerBlue;
+}
+table.adminlist .btn-warning{
+	background-color: #F89406;
+	color:white;
+}
+table.adminlist .btn-success{
+	background-color: #51A351;
+	color:white;
+}
+table.adminlist .btn-primary{
+	background-color: #04C;
+	color:white;
+}
+table.adminlist .btn-info{
+	background-color: #2F96B4;
+	color:white;
+}
+a.contribute{
+	background: none repeat scroll 0 0 #F4F4F4;
+	border: 1px solid #CCCCCC;
+	padding: 5px;
+}
+
+/* Custom Joomla 3.0 stuff */
+.pointer, .pointer[disabled], .pointer[readonly]{
+	cursor:pointer;
+}
+input[type="text"].invalid, select.invalid, .invalid span, .invalid{
+	border-color:red;
+	color:red;
+}
+div.icon-radio-checked,
+div.icon-plus-2{
+	color: #468847;
+}
+div.icon-radio-checked:hover,
+div.icon-radio-checked:focus,
+div.icon-plus-2:hover,
+div.icon-plus-2:focus{
+	color: #356635;
+}
+div.icon-radio-unchecked{
+	color: #b94a48;
+}
+div.icon-radio-unchecked:hover,
+div.icon-radio-unchecked:focus {
+	color: #953b39;
+}
+
+#sermonList a.active > .icon-feed {
+    color: #51a351;
+}
+#sermonList a > .icon-feed {
+    color: #b94a48;
+}
+.id3-info {
+	float: right;
+	margin-right: 20px;
+	border: 1px dotted grey;
+	border-radius: 5px;
+	padding: 4px 8px;
+	background-color: lightyellow;
+}
