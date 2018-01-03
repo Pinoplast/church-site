@@ -35,7 +35,7 @@ CREATE TABLE `wmjg1_assets` (
   UNIQUE KEY `idx_asset_name` (`name`),
   KEY `idx_lft_rgt` (`lft`,`rgt`),
   KEY `idx_parent_id` (`parent_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +44,7 @@ CREATE TABLE `wmjg1_assets` (
 
 LOCK TABLES `wmjg1_assets` WRITE;
 /*!40000 ALTER TABLE `wmjg1_assets` DISABLE KEYS */;
-INSERT INTO `wmjg1_assets` VALUES (1,0,0,107,0,'root.1','Root Asset','{\"core.login.site\":{\"6\":1,\"2\":1},\"core.login.admin\":{\"6\":1},\"core.login.offline\":{\"6\":1},\"core.admin\":{\"8\":1},\"core.manage\":{\"7\":1},\"core.create\":{\"6\":1,\"3\":1},\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1},\"core.edit.own\":{\"6\":1,\"3\":1}}');
+INSERT INTO `wmjg1_assets` VALUES (1,0,0,125,0,'root.1','Root Asset','{\"core.login.site\":{\"6\":1,\"2\":1},\"core.login.admin\":{\"6\":1},\"core.login.offline\":{\"6\":1},\"core.admin\":{\"8\":1},\"core.manage\":{\"7\":1},\"core.create\":{\"6\":1,\"3\":1},\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1},\"core.edit.own\":{\"6\":1,\"3\":1}}');
 INSERT INTO `wmjg1_assets` VALUES (2,1,1,2,1,'com_admin','com_admin','{}');
 INSERT INTO `wmjg1_assets` VALUES (3,1,3,6,1,'com_banners','com_banners','{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1}}');
 INSERT INTO `wmjg1_assets` VALUES (4,1,7,8,1,'com_cache','com_cache','{\"core.admin\":{\"7\":1},\"core.manage\":{\"7\":1}}');
@@ -61,25 +61,25 @@ INSERT INTO `wmjg1_assets` VALUES (14,1,33,34,1,'com_massmail','com_massmail','{
 INSERT INTO `wmjg1_assets` VALUES (15,1,35,36,1,'com_media','com_media','{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1},\"core.create\":{\"3\":1},\"core.delete\":{\"5\":1}}');
 INSERT INTO `wmjg1_assets` VALUES (16,1,37,40,1,'com_menus','com_menus','{\"core.admin\":{\"7\":1}}');
 INSERT INTO `wmjg1_assets` VALUES (17,1,41,42,1,'com_messages','com_messages','{\"core.admin\":{\"7\":1},\"core.manage\":{\"7\":1}}');
-INSERT INTO `wmjg1_assets` VALUES (18,1,43,76,1,'com_modules','com_modules','{\"core.admin\":{\"7\":1}}');
-INSERT INTO `wmjg1_assets` VALUES (19,1,77,80,1,'com_newsfeeds','com_newsfeeds','{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1}}');
-INSERT INTO `wmjg1_assets` VALUES (20,1,81,82,1,'com_plugins','com_plugins','{\"core.admin\":{\"7\":1}}');
-INSERT INTO `wmjg1_assets` VALUES (21,1,83,84,1,'com_redirect','com_redirect','{\"core.admin\":{\"7\":1}}');
-INSERT INTO `wmjg1_assets` VALUES (22,1,85,86,1,'com_search','com_search','{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1}}');
-INSERT INTO `wmjg1_assets` VALUES (23,1,87,88,1,'com_templates','com_templates','{\"core.admin\":{\"7\":1}}');
-INSERT INTO `wmjg1_assets` VALUES (24,1,89,92,1,'com_users','com_users','{\"core.admin\":{\"7\":1}}');
-INSERT INTO `wmjg1_assets` VALUES (26,1,93,94,1,'com_wrapper','com_wrapper','{}');
+INSERT INTO `wmjg1_assets` VALUES (18,1,43,90,1,'com_modules','com_modules','{\"core.admin\":{\"7\":1}}');
+INSERT INTO `wmjg1_assets` VALUES (19,1,91,94,1,'com_newsfeeds','com_newsfeeds','{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1}}');
+INSERT INTO `wmjg1_assets` VALUES (20,1,95,96,1,'com_plugins','com_plugins','{\"core.admin\":{\"7\":1}}');
+INSERT INTO `wmjg1_assets` VALUES (21,1,97,98,1,'com_redirect','com_redirect','{\"core.admin\":{\"7\":1}}');
+INSERT INTO `wmjg1_assets` VALUES (22,1,99,100,1,'com_search','com_search','{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1}}');
+INSERT INTO `wmjg1_assets` VALUES (23,1,101,102,1,'com_templates','com_templates','{\"core.admin\":{\"7\":1}}');
+INSERT INTO `wmjg1_assets` VALUES (24,1,103,106,1,'com_users','com_users','{\"core.admin\":{\"7\":1}}');
+INSERT INTO `wmjg1_assets` VALUES (26,1,107,108,1,'com_wrapper','com_wrapper','{}');
 INSERT INTO `wmjg1_assets` VALUES (27,8,18,19,2,'com_content.category.2','Uncategorised','{}');
 INSERT INTO `wmjg1_assets` VALUES (28,3,4,5,2,'com_banners.category.3','Uncategorised','{}');
 INSERT INTO `wmjg1_assets` VALUES (29,7,14,15,2,'com_contact.category.4','Uncategorised','{}');
-INSERT INTO `wmjg1_assets` VALUES (30,19,78,79,2,'com_newsfeeds.category.5','Uncategorised','{}');
-INSERT INTO `wmjg1_assets` VALUES (32,24,90,91,2,'com_users.category.7','Uncategorised','{}');
-INSERT INTO `wmjg1_assets` VALUES (33,1,95,96,1,'com_finder','com_finder','{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1}}');
-INSERT INTO `wmjg1_assets` VALUES (34,1,97,98,1,'com_joomlaupdate','com_joomlaupdate','{}');
-INSERT INTO `wmjg1_assets` VALUES (35,1,99,100,1,'com_tags','com_tags','{}');
-INSERT INTO `wmjg1_assets` VALUES (36,1,101,102,1,'com_contenthistory','com_contenthistory','{}');
-INSERT INTO `wmjg1_assets` VALUES (37,1,103,104,1,'com_ajax','com_ajax','{}');
-INSERT INTO `wmjg1_assets` VALUES (38,1,105,106,1,'com_postinstall','com_postinstall','{}');
+INSERT INTO `wmjg1_assets` VALUES (30,19,92,93,2,'com_newsfeeds.category.5','Uncategorised','{}');
+INSERT INTO `wmjg1_assets` VALUES (32,24,104,105,2,'com_users.category.7','Uncategorised','{}');
+INSERT INTO `wmjg1_assets` VALUES (33,1,109,110,1,'com_finder','com_finder','{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1}}');
+INSERT INTO `wmjg1_assets` VALUES (34,1,111,112,1,'com_joomlaupdate','com_joomlaupdate','{}');
+INSERT INTO `wmjg1_assets` VALUES (35,1,113,114,1,'com_tags','com_tags','{}');
+INSERT INTO `wmjg1_assets` VALUES (36,1,115,116,1,'com_contenthistory','com_contenthistory','{}');
+INSERT INTO `wmjg1_assets` VALUES (37,1,117,118,1,'com_ajax','com_ajax','{}');
+INSERT INTO `wmjg1_assets` VALUES (38,1,119,120,1,'com_postinstall','com_postinstall','{}');
 INSERT INTO `wmjg1_assets` VALUES (39,18,44,45,2,'com_modules.module.1','Main Menu','{}');
 INSERT INTO `wmjg1_assets` VALUES (40,18,46,47,2,'com_modules.module.2','Login','{}');
 INSERT INTO `wmjg1_assets` VALUES (41,18,48,49,2,'com_modules.module.3','Popular Articles','{}');
@@ -98,6 +98,15 @@ INSERT INTO `wmjg1_assets` VALUES (53,18,72,73,2,'com_modules.module.86','Joomla
 INSERT INTO `wmjg1_assets` VALUES (54,16,38,39,2,'com_menus.menu.1','Main Menu','{}');
 INSERT INTO `wmjg1_assets` VALUES (55,18,74,75,2,'com_modules.module.87','Sample Data','{}');
 INSERT INTO `wmjg1_assets` VALUES (56,11,26,27,2,'com_languages.language.2','Ukrainian (uk-UA)','{}');
+INSERT INTO `wmjg1_assets` VALUES (57,1,121,124,1,'com_sermonspeaker','com_sermonspeaker','{}');
+INSERT INTO `wmjg1_assets` VALUES (58,57,122,123,2,'com_sermonspeaker.category.8','Uncategorized','{}');
+INSERT INTO `wmjg1_assets` VALUES (59,18,76,77,2,'com_modules.module.88','Latest Sermons','{}');
+INSERT INTO `wmjg1_assets` VALUES (60,18,78,79,2,'com_modules.module.89','SermonCast','{}');
+INSERT INTO `wmjg1_assets` VALUES (61,18,80,81,2,'com_modules.module.90','SermonSpeaker Module','{}');
+INSERT INTO `wmjg1_assets` VALUES (62,18,82,83,2,'com_modules.module.91','SermonSpeaker Administrator Module','{}');
+INSERT INTO `wmjg1_assets` VALUES (63,18,84,85,2,'com_modules.module.92','SermonSpeaker Upload Module','{}');
+INSERT INTO `wmjg1_assets` VALUES (64,18,86,87,2,'com_modules.module.93','Related Sermons','{}');
+INSERT INTO `wmjg1_assets` VALUES (65,18,88,89,2,'com_modules.module.94','Sermons Archive','{}');
 /*!40000 ALTER TABLE `wmjg1_assets` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -294,7 +303,7 @@ CREATE TABLE `wmjg1_categories` (
   KEY `idx_left_right` (`lft`,`rgt`),
   KEY `idx_alias` (`alias`(100)),
   KEY `idx_language` (`language`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -303,12 +312,13 @@ CREATE TABLE `wmjg1_categories` (
 
 LOCK TABLES `wmjg1_categories` WRITE;
 /*!40000 ALTER TABLE `wmjg1_categories` DISABLE KEYS */;
-INSERT INTO `wmjg1_categories` VALUES (1,0,0,0,11,0,'','system','ROOT','root','','',1,0,'0000-00-00 00:00:00',1,'{}','','','{}',915,'2018-01-02 12:42:47',0,'0000-00-00 00:00:00',0,'*',1);
+INSERT INTO `wmjg1_categories` VALUES (1,0,0,0,13,0,'','system','ROOT','root','','',1,0,'0000-00-00 00:00:00',1,'{}','','','{}',915,'2018-01-02 12:42:47',0,'0000-00-00 00:00:00',0,'*',1);
 INSERT INTO `wmjg1_categories` VALUES (2,27,1,1,2,1,'uncategorised','com_content','Uncategorised','uncategorised','','',1,0,'0000-00-00 00:00:00',1,'{\"category_layout\":\"\",\"image\":\"\"}','','','{\"author\":\"\",\"robots\":\"\"}',915,'2018-01-02 12:42:47',0,'0000-00-00 00:00:00',0,'*',1);
 INSERT INTO `wmjg1_categories` VALUES (3,28,1,3,4,1,'uncategorised','com_banners','Uncategorised','uncategorised','','',1,0,'0000-00-00 00:00:00',1,'{\"category_layout\":\"\",\"image\":\"\"}','','','{\"author\":\"\",\"robots\":\"\"}',915,'2018-01-02 12:42:47',0,'0000-00-00 00:00:00',0,'*',1);
 INSERT INTO `wmjg1_categories` VALUES (4,29,1,5,6,1,'uncategorised','com_contact','Uncategorised','uncategorised','','',1,0,'0000-00-00 00:00:00',1,'{\"category_layout\":\"\",\"image\":\"\"}','','','{\"author\":\"\",\"robots\":\"\"}',915,'2018-01-02 12:42:47',0,'0000-00-00 00:00:00',0,'*',1);
 INSERT INTO `wmjg1_categories` VALUES (5,30,1,7,8,1,'uncategorised','com_newsfeeds','Uncategorised','uncategorised','','',1,0,'0000-00-00 00:00:00',1,'{\"category_layout\":\"\",\"image\":\"\"}','','','{\"author\":\"\",\"robots\":\"\"}',915,'2018-01-02 12:42:47',0,'0000-00-00 00:00:00',0,'*',1);
 INSERT INTO `wmjg1_categories` VALUES (7,32,1,9,10,1,'uncategorised','com_users','Uncategorised','uncategorised','','',1,0,'0000-00-00 00:00:00',1,'{\"category_layout\":\"\",\"image\":\"\"}','','','{\"author\":\"\",\"robots\":\"\"}',915,'2018-01-02 12:42:47',0,'0000-00-00 00:00:00',0,'*',1);
+INSERT INTO `wmjg1_categories` VALUES (8,58,1,11,12,1,'uncategorized','com_sermonspeaker','Uncategorized','uncategorized','','',1,0,'0000-00-00 00:00:00',1,'','','','',915,'2018-01-03 10:25:24',0,'2018-01-03 10:25:24',0,'*',1);
 /*!40000 ALTER TABLE `wmjg1_categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -510,7 +520,7 @@ CREATE TABLE `wmjg1_content_types` (
   `content_history_options` varchar(5120) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'JSON string for com_contenthistory options',
   PRIMARY KEY (`type_id`),
   KEY `idx_alias` (`type_alias`(100))
-) ENGINE=InnoDB AUTO_INCREMENT=10000 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10004 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -532,6 +542,10 @@ INSERT INTO `wmjg1_content_types` VALUES (10,'Banners Category','com_banners.cat
 INSERT INTO `wmjg1_content_types` VALUES (11,'Banner Client','com_banners.client','{\"special\":{\"dbtable\":\"#__banner_clients\",\"key\":\"id\",\"type\":\"Client\",\"prefix\":\"BannersTable\"}}','','','','{\"formFile\":\"administrator\\/components\\/com_banners\\/models\\/forms\\/client.xml\", \"hideFields\":[\"checked_out\",\"checked_out_time\"], \"ignoreChanges\":[\"checked_out\", \"checked_out_time\"], \"convertToInt\":[], \"displayLookup\":[]}');
 INSERT INTO `wmjg1_content_types` VALUES (12,'User Notes','com_users.note','{\"special\":{\"dbtable\":\"#__user_notes\",\"key\":\"id\",\"type\":\"Note\",\"prefix\":\"UsersTable\"}}','','','','{\"formFile\":\"administrator\\/components\\/com_users\\/models\\/forms\\/note.xml\", \"hideFields\":[\"checked_out\",\"checked_out_time\", \"publish_up\", \"publish_down\"],\"ignoreChanges\":[\"modified_user_id\", \"modified_time\", \"checked_out\", \"checked_out_time\"], \"convertToInt\":[\"publish_up\", \"publish_down\"],\"displayLookup\":[{\"sourceColumn\":\"catid\",\"targetTable\":\"#__categories\",\"targetColumn\":\"id\",\"displayColumn\":\"title\"}, {\"sourceColumn\":\"created_user_id\",\"targetTable\":\"#__users\",\"targetColumn\":\"id\",\"displayColumn\":\"name\"}, {\"sourceColumn\":\"user_id\",\"targetTable\":\"#__users\",\"targetColumn\":\"id\",\"displayColumn\":\"name\"}, {\"sourceColumn\":\"modified_user_id\",\"targetTable\":\"#__users\",\"targetColumn\":\"id\",\"displayColumn\":\"name\"}]}');
 INSERT INTO `wmjg1_content_types` VALUES (13,'User Notes Category','com_users.category','{\"special\":{\"dbtable\":\"#__categories\",\"key\":\"id\",\"type\":\"Category\",\"prefix\":\"JTable\",\"config\":\"array()\"},\"common\":{\"dbtable\":\"#__ucm_content\",\"key\":\"ucm_id\",\"type\":\"Corecontent\",\"prefix\":\"JTable\",\"config\":\"array()\"}}','','{\"common\":{\"core_content_item_id\":\"id\",\"core_title\":\"title\",\"core_state\":\"published\",\"core_alias\":\"alias\",\"core_created_time\":\"created_time\",\"core_modified_time\":\"modified_time\",\"core_body\":\"description\", \"core_hits\":\"hits\",\"core_publish_up\":\"null\",\"core_publish_down\":\"null\",\"core_access\":\"access\", \"core_params\":\"params\", \"core_featured\":\"null\", \"core_metadata\":\"metadata\", \"core_language\":\"language\", \"core_images\":\"null\", \"core_urls\":\"null\", \"core_version\":\"version\", \"core_ordering\":\"null\", \"core_metakey\":\"metakey\", \"core_metadesc\":\"metadesc\", \"core_catid\":\"parent_id\", \"core_xreference\":\"null\", \"asset_id\":\"asset_id\"}, \"special\":{\"parent_id\":\"parent_id\",\"lft\":\"lft\",\"rgt\":\"rgt\",\"level\":\"level\",\"path\":\"path\",\"extension\":\"extension\",\"note\":\"note\"}}','','{\"formFile\":\"administrator\\/components\\/com_categories\\/models\\/forms\\/category.xml\", \"hideFields\":[\"checked_out\",\"checked_out_time\",\"version\",\"lft\",\"rgt\",\"level\",\"path\",\"extension\"], \"ignoreChanges\":[\"modified_user_id\", \"modified_time\", \"checked_out\", \"checked_out_time\", \"version\", \"hits\", \"path\"], \"convertToInt\":[\"publish_up\", \"publish_down\"], \"displayLookup\":[{\"sourceColumn\":\"created_user_id\",\"targetTable\":\"#__users\",\"targetColumn\":\"id\",\"displayColumn\":\"name\"}, {\"sourceColumn\":\"access\",\"targetTable\":\"#__viewlevels\",\"targetColumn\":\"id\",\"displayColumn\":\"title\"},{\"sourceColumn\":\"modified_user_id\",\"targetTable\":\"#__users\",\"targetColumn\":\"id\",\"displayColumn\":\"name\"},{\"sourceColumn\":\"parent_id\",\"targetTable\":\"#__categories\",\"targetColumn\":\"id\",\"displayColumn\":\"title\"}]}');
+INSERT INTO `wmjg1_content_types` VALUES (10000,'Sermon','com_sermonspeaker.sermon','{\"special\":{\"dbtable\":\"#__sermon_sermons\",\"key\":\"id\",\"type\":\"Sermon\",\"prefix\":\"SermonspeakerTable\",\"config\":\"array()\"}}','','{\"common\":{\"core_content_item_id\":\"id\",\"core_title\":\"title\",\"core_state\":\"state\",\"core_alias\":\"alias\",\"core_created_time\":\"created\",\"core_modified_time\":\"modified\",\"core_body\":\"notes\",\"core_hits\":\"hits\",\"core_publish_up\":null,\"core_publish_down\":null,\"core_access\":null,\"core_params\":null,\"core_featured\":null,\"core_metadata\":null,\"core_language\":\"language\",\"core_images\":\"picture\",\"core_urls\":null,\"core_version\":\"version\",\"core_ordering\":\"ordering\",\"core_metakey\":\"metakey\",\"core_metadesc\":\"metadesc\",\"core_catid\":\"catid\",\"core_xreference\":null,\"asset_id\":null},\"special\":{}}','SermonspeakerHelperRoute::getSermonRoute','{\"form_file\":\"administrator\\/components\\/com_sermonspeaker\\/models\\/forms\\/sermon.xml\",\"hide_fields\":[\"checked_out\",\"checked_out_time\",\"version\"],\"display_lookup\":[{\"source_column\":\"created_by\",\"target_table\":\"#__users\",\"target_column\":\"id\",\"display_column\":\"name\"},{\"source_column\":\"modified_by\",\"target_table\":\"#__users\",\"target_column\":\"id\",\"display_column\":\"name\"},{\"source_column\":\"catid\",\"target_table\":\"#__categories\",\"target_column\":\"id\",\"display_column\":\"title\"},{\"source_column\":\"speaker_id\",\"target_table\":\"#__sermon_speakers\",\"target_column\":\"id\",\"display_column\":\"title\"},{\"source_column\":\"series_id\",\"target_table\":\"#__sermon_series\",\"target_column\":\"id\",\"display_column\":\"title\"}]}');
+INSERT INTO `wmjg1_content_types` VALUES (10001,'Speaker','com_sermonspeaker.speaker','{\"special\":{\"dbtable\":\"#__sermon_speakers\",\"key\":\"id\",\"type\":\"Speaker\",\"prefix\":\"SermonspeakerTable\",\"config\":\"array()\"}}','','{\"common\":{\"core_content_item_id\":\"id\",\"core_title\":\"title\",\"core_state\":\"state\",\"core_alias\":\"alias\",\"core_created_time\":\"created\",\"core_modified_time\":\"modified\",\"core_body\":\"bio\",\"core_hits\":\"hits\",\"core_publish_up\":null,\"core_publish_down\":null,\"core_access\":null,\"core_params\":null,\"core_featured\":null,\"core_metadata\":null,\"core_language\":\"language\",\"core_images\":\"pic\",\"core_urls\":null,\"core_version\":\"version\",\"core_ordering\":\"ordering\",\"core_metakey\":\"metakey\",\"core_metadesc\":\"metadesc\",\"core_catid\":\"catid\",\"core_xreference\":null,\"asset_id\":null},\"special\":{}}','SermonspeakerHelperRoute::getSpeakerRoute','{\"form_file\":\"administrator\\/components\\/com_sermonspeaker\\/models\\/forms\\/speaker.xml\",\"hide_fields\":[\"checked_out\",\"checked_out_time\",\"version\"],\"display_lookup\":[{\"source_column\":\"created_by\",\"target_table\":\"#__users\",\"target_column\":\"id\",\"display_column\":\"name\"},{\"source_column\":\"modified_by\",\"target_table\":\"#__users\",\"target_column\":\"id\",\"display_column\":\"name\"},{\"source_column\":\"catid\",\"target_table\":\"#__categories\",\"target_column\":\"id\",\"display_column\":\"title\"},{\"source_column\":\"speaker_id\",\"target_table\":\"#__sermon_speakers\",\"target_column\":\"id\",\"display_column\":\"title\"},{\"source_column\":\"series_id\",\"target_table\":\"#__sermon_series\",\"target_column\":\"id\",\"display_column\":\"title\"}]}');
+INSERT INTO `wmjg1_content_types` VALUES (10002,'Serie','com_sermonspeaker.serie','{\"special\":{\"dbtable\":\"#__sermon_series\",\"key\":\"id\",\"type\":\"Serie\",\"prefix\":\"SermonspeakerTable\",\"config\":\"array()\"}}','','{\"common\":{\"core_content_item_id\":\"id\",\"core_title\":\"title\",\"core_state\":\"state\",\"core_alias\":\"alias\",\"core_created_time\":\"created\",\"core_modified_time\":\"modified\",\"core_body\":\"series_description\",\"core_hits\":\"hits\",\"core_publish_up\":null,\"core_publish_down\":null,\"core_access\":null,\"core_params\":null,\"core_featured\":null,\"core_metadata\":null,\"core_language\":\"language\",\"core_images\":\"avatar\",\"core_urls\":null,\"core_version\":\"version\",\"core_ordering\":\"ordering\",\"core_metakey\":\"metakey\",\"core_metadesc\":\"metadesc\",\"core_catid\":\"catid\",\"core_xreference\":null,\"asset_id\":null},\"special\":{}}','SermonspeakerHelperRoute::getSerieRoute','{\"form_file\":\"administrator\\/components\\/com_sermonspeaker\\/models\\/forms\\/serie.xml\",\"hide_fields\":[\"checked_out\",\"checked_out_time\",\"version\"],\"display_lookup\":[{\"source_column\":\"created_by\",\"target_table\":\"#__users\",\"target_column\":\"id\",\"display_column\":\"name\"},{\"source_column\":\"modified_by\",\"target_table\":\"#__users\",\"target_column\":\"id\",\"display_column\":\"name\"},{\"source_column\":\"catid\",\"target_table\":\"#__categories\",\"target_column\":\"id\",\"display_column\":\"title\"},{\"source_column\":\"speaker_id\",\"target_table\":\"#__sermon_speakers\",\"target_column\":\"id\",\"display_column\":\"title\"},{\"source_column\":\"series_id\",\"target_table\":\"#__sermon_series\",\"target_column\":\"id\",\"display_column\":\"title\"}]}');
+INSERT INTO `wmjg1_content_types` VALUES (10003,'SermonSpeaker Category','com_sermonspeaker.category','{\"special\":{\"dbtable\":\"#__categories\",\"key\":\"id\",\"type\":\"Category\",\"prefix\":\"JTable\",\"config\":\"array()\"}}','','{\"common\":{\"core_content_item_id\":\"id\",\"core_title\":\"title\",\"core_state\":\"published\",\"core_alias\":\"alias\",\"core_created_time\":\"created_time\",\"core_modified_time\":\"modified_time\",\"core_body\":\"description\",\"core_hits\":\"hits\",\"core_publish_up\":null,\"core_publish_down\":null,\"core_access\":\"access\",\"core_params\":\"params\",\"core_featured\":null,\"core_metadata\":\"metadata\",\"core_language\":\"language\",\"core_images\":null,\"core_urls\":null,\"core_version\":\"version\",\"core_ordering\":null,\"core_metakey\":\"metakey\",\"core_metadesc\":\"metadesc\",\"core_catid\":\"parent_id\",\"core_xreference\":null,\"asset_id\":\"asset_id\"},\"special\":{\"parent_id\":\"parent_id\",\"lft\":\"lft\",\"rgt\":\"rgt\",\"level\":\"level\",\"path\":\"path\",\"extension\":\"extension\",\"note\":\"note\"}}','SermonspeakerHelperRoute::getSermonsRoute','{\"form_file\":\"administrator\\/components\\/com_categories\\/models\\/forms\\/category.xml\",\"hideFields\":[\"asset_id\",\"checked_out\",\"checked_out_time\",\"version\",\"lft\",\"rgt\",\"level\",\"path\",\"extension\"],\"ignoreChanges\":[\"modified_user_id\",\"modified_time\",\"checked_out\",\"checked_out_time\",\"version\",\"hits\",\"path\"],\"convertToInt\":[\"publish_up\",\"publish_down\"],\"displayLookup\":[{\"sourceColumn\":\"created_user_id\",\"targetTable\":\"#__users\",\"targetColumn\":\"id\",\"displayColumn\":\"name\"},{\"sourceColumn\":\"modified_user_id\",\"targetTable\":\"#__users\",\"targetColumn\":\"id\",\"displayColumn\":\"name\"},{\"sourceColumn\":\"access\",\"targetTable\":\"#__viewlevels\",\"targetColumn\":\"id\",\"displayColumn\":\"title\"},{\"sourceColumn\":\"parent_id\",\"targetTable\":\"#__categories\",\"targetColumn\":\"id\",\"displayColumn\":\"name\"}]}');
 /*!40000 ALTER TABLE `wmjg1_content_types` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -617,7 +631,7 @@ CREATE TABLE `wmjg1_extensions` (
   KEY `element_clientid` (`element`,`client_id`),
   KEY `element_folder_clientid` (`element`,`folder`,`client_id`),
   KEY `extension` (`type`,`element`,`folder`,`client_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10007 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10022 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -659,7 +673,7 @@ INSERT INTO `wmjg1_extensions` VALUES (32,0,'com_postinstall','component','com_p
 INSERT INTO `wmjg1_extensions` VALUES (33,0,'com_fields','component','com_fields','',1,1,1,0,'{\"name\":\"com_fields\",\"type\":\"component\",\"creationDate\":\"March 2016\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2005 - 2017 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.7.0\",\"description\":\"COM_FIELDS_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"fields\"}','','','',0,'0000-00-00 00:00:00',0,0);
 INSERT INTO `wmjg1_extensions` VALUES (34,0,'com_associations','component','com_associations','',1,1,1,0,'{\"name\":\"com_associations\",\"type\":\"component\",\"creationDate\":\"Januar 2017\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2005 - 2017 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.7.0\",\"description\":\"COM_ASSOCIATIONS_XML_DESCRIPTION\",\"group\":\"\"}','','','',0,'0000-00-00 00:00:00',0,0);
 INSERT INTO `wmjg1_extensions` VALUES (102,0,'LIB_PHPUTF8','library','phputf8','',0,1,1,1,'{\"name\":\"LIB_PHPUTF8\",\"type\":\"library\",\"creationDate\":\"2006\",\"author\":\"Harry Fuecks\",\"copyright\":\"Copyright various authors\",\"authorEmail\":\"hfuecks@gmail.com\",\"authorUrl\":\"http:\\/\\/sourceforge.net\\/projects\\/phputf8\",\"version\":\"0.5\",\"description\":\"LIB_PHPUTF8_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"phputf8\"}','','','',0,'0000-00-00 00:00:00',0,0);
-INSERT INTO `wmjg1_extensions` VALUES (103,0,'LIB_JOOMLA','library','joomla','',0,1,1,1,'{\"name\":\"LIB_JOOMLA\",\"type\":\"library\",\"creationDate\":\"2008\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"https:\\/\\/www.joomla.org\",\"version\":\"13.1\",\"description\":\"LIB_JOOMLA_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"joomla\"}','{\"mediaversion\":\"44e60513f4dcfd7566c94a837d524499\"}','','',0,'0000-00-00 00:00:00',0,0);
+INSERT INTO `wmjg1_extensions` VALUES (103,0,'LIB_JOOMLA','library','joomla','',0,1,1,1,'{\"name\":\"LIB_JOOMLA\",\"type\":\"library\",\"creationDate\":\"2008\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"https:\\/\\/www.joomla.org\",\"version\":\"13.1\",\"description\":\"LIB_JOOMLA_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"joomla\"}','{\"mediaversion\":\"da57fe4002fb666f3dcd11cf0f48020a\"}','','',0,'0000-00-00 00:00:00',0,0);
 INSERT INTO `wmjg1_extensions` VALUES (104,0,'LIB_IDNA','library','idna_convert','',0,1,1,1,'{\"name\":\"LIB_IDNA\",\"type\":\"library\",\"creationDate\":\"2004\",\"author\":\"phlyLabs\",\"copyright\":\"2004-2011 phlyLabs Berlin, http:\\/\\/phlylabs.de\",\"authorEmail\":\"phlymail@phlylabs.de\",\"authorUrl\":\"http:\\/\\/phlylabs.de\",\"version\":\"0.8.0\",\"description\":\"LIB_IDNA_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"idna_convert\"}','','','',0,'0000-00-00 00:00:00',0,0);
 INSERT INTO `wmjg1_extensions` VALUES (105,0,'FOF','library','fof','',0,1,1,1,'{\"name\":\"FOF\",\"type\":\"library\",\"creationDate\":\"2015-04-22 13:15:32\",\"author\":\"Nicholas K. Dionysopoulos \\/ Akeeba Ltd\",\"copyright\":\"(C)2011-2015 Nicholas K. Dionysopoulos\",\"authorEmail\":\"nicholas@akeebabackup.com\",\"authorUrl\":\"https:\\/\\/www.akeebabackup.com\",\"version\":\"2.4.3\",\"description\":\"LIB_FOF_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"fof\"}','','','',0,'0000-00-00 00:00:00',0,0);
 INSERT INTO `wmjg1_extensions` VALUES (106,0,'LIB_PHPASS','library','phpass','',0,1,1,1,'{\"name\":\"LIB_PHPASS\",\"type\":\"library\",\"creationDate\":\"2004-2006\",\"author\":\"Solar Designer\",\"copyright\":\"\",\"authorEmail\":\"solar@openwall.com\",\"authorUrl\":\"http:\\/\\/www.openwall.com\\/phpass\\/\",\"version\":\"0.3\",\"description\":\"LIB_PHPASS_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"phpass\"}','','','',0,'0000-00-00 00:00:00',0,0);
@@ -753,9 +767,9 @@ INSERT INTO `wmjg1_extensions` VALUES (448,0,'plg_twofactorauth_totp','plugin','
 INSERT INTO `wmjg1_extensions` VALUES (449,0,'plg_authentication_cookie','plugin','cookie','authentication',0,1,1,0,'{\"name\":\"plg_authentication_cookie\",\"type\":\"plugin\",\"creationDate\":\"July 2013\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_AUTH_COOKIE_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"cookie\"}','','','',0,'0000-00-00 00:00:00',0,0);
 INSERT INTO `wmjg1_extensions` VALUES (450,0,'plg_twofactorauth_yubikey','plugin','yubikey','twofactorauth',0,0,1,0,'{\"name\":\"plg_twofactorauth_yubikey\",\"type\":\"plugin\",\"creationDate\":\"September 2013\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.2.0\",\"description\":\"PLG_TWOFACTORAUTH_YUBIKEY_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"yubikey\"}','','','',0,'0000-00-00 00:00:00',0,0);
 INSERT INTO `wmjg1_extensions` VALUES (451,0,'plg_search_tags','plugin','tags','search',0,1,1,0,'{\"name\":\"plg_search_tags\",\"type\":\"plugin\",\"creationDate\":\"March 2014\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_SEARCH_TAGS_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"tags\"}','{\"search_limit\":\"50\",\"show_tagged_items\":\"1\"}','','',0,'0000-00-00 00:00:00',0,0);
-INSERT INTO `wmjg1_extensions` VALUES (452,0,'plg_system_updatenotification','plugin','updatenotification','system',0,1,1,0,'{\"name\":\"plg_system_updatenotification\",\"type\":\"plugin\",\"creationDate\":\"May 2015\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_SYSTEM_UPDATENOTIFICATION_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"updatenotification\"}','{\"lastrun\":1514897007}','','',0,'0000-00-00 00:00:00',0,0);
+INSERT INTO `wmjg1_extensions` VALUES (452,0,'plg_system_updatenotification','plugin','updatenotification','system',0,1,1,0,'{\"name\":\"plg_system_updatenotification\",\"type\":\"plugin\",\"creationDate\":\"May 2015\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_SYSTEM_UPDATENOTIFICATION_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"updatenotification\"}','{\"lastrun\":1514975033}','','',0,'0000-00-00 00:00:00',0,0);
 INSERT INTO `wmjg1_extensions` VALUES (453,0,'plg_editors-xtd_module','plugin','module','editors-xtd',0,1,1,0,'{\"name\":\"plg_editors-xtd_module\",\"type\":\"plugin\",\"creationDate\":\"October 2015\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_MODULE_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"module\"}','','','',0,'0000-00-00 00:00:00',0,0);
-INSERT INTO `wmjg1_extensions` VALUES (454,0,'plg_system_stats','plugin','stats','system',0,1,1,0,'{\"name\":\"plg_system_stats\",\"type\":\"plugin\",\"creationDate\":\"November 2013\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_SYSTEM_STATS_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"stats\"}','{\"mode\":2,\"lastrun\":1514897060,\"unique_id\":\"895017ab4a71b99f716d47166497e4aa240994c4\",\"interval\":12}','','',0,'0000-00-00 00:00:00',0,0);
+INSERT INTO `wmjg1_extensions` VALUES (454,0,'plg_system_stats','plugin','stats','system',0,1,1,0,'{\"name\":\"plg_system_stats\",\"type\":\"plugin\",\"creationDate\":\"November 2013\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_SYSTEM_STATS_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"stats\"}','{\"mode\":3,\"lastrun\":1514975154,\"unique_id\":\"895017ab4a71b99f716d47166497e4aa240994c4\",\"interval\":12}','','',0,'0000-00-00 00:00:00',0,0);
 INSERT INTO `wmjg1_extensions` VALUES (455,0,'plg_installer_packageinstaller','plugin','packageinstaller','installer',0,1,1,1,'{\"name\":\"plg_installer_packageinstaller\",\"type\":\"plugin\",\"creationDate\":\"May 2016\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.6.0\",\"description\":\"PLG_INSTALLER_PACKAGEINSTALLER_PLUGIN_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"packageinstaller\"}','','','',0,'0000-00-00 00:00:00',1,0);
 INSERT INTO `wmjg1_extensions` VALUES (456,0,'PLG_INSTALLER_FOLDERINSTALLER','plugin','folderinstaller','installer',0,1,1,1,'{\"name\":\"PLG_INSTALLER_FOLDERINSTALLER\",\"type\":\"plugin\",\"creationDate\":\"May 2016\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.6.0\",\"description\":\"PLG_INSTALLER_FOLDERINSTALLER_PLUGIN_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"folderinstaller\"}','','','',0,'0000-00-00 00:00:00',2,0);
 INSERT INTO `wmjg1_extensions` VALUES (457,0,'PLG_INSTALLER_URLINSTALLER','plugin','urlinstaller','installer',0,1,1,1,'{\"name\":\"PLG_INSTALLER_URLINSTALLER\",\"type\":\"plugin\",\"creationDate\":\"May 2016\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.6.0\",\"description\":\"PLG_INSTALLER_URLINSTALLER_PLUGIN_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"urlinstaller\"}','','','',0,'0000-00-00 00:00:00',3,0);
@@ -795,6 +809,21 @@ INSERT INTO `wmjg1_extensions` VALUES (10002,0,'uk-UA','package','pkg_uk-UA','',
 INSERT INTO `wmjg1_extensions` VALUES (10004,0,'ja_simpli','template','ja_simpli','',0,1,1,0,'{\"name\":\"ja_simpli\",\"type\":\"template\",\"creationDate\":\"Dec 7, 2017\",\"author\":\"JoomlArt\",\"copyright\":\"Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.\",\"authorEmail\":\"admin@joomlart.com\",\"authorUrl\":\"\",\"version\":\"1.0.2\",\"description\":\"\\n\\t\\t\\n\\t\\t<div align=\\\"center\\\">\\n\\t\\t\\t<div class=\\\"alert alert-success\\\" style=\\\"background-color:#DFF0D8;border-color:#D6E9C6;color: #468847;padding: 1px 0;\\\">\\n\\t\\t\\t\\t<a href=\\\"\\/\\/www.joomlart.com\\/joomla\\/templates\\/ja-simpli\\\">The missing Joomla 3 template - JA Simpli<\\/a>\\n\\t\\t\\t\\t<p>JA Simpli has been developed with the Joomla default templates in mind. We have tried to add the features that are missing from the default Joomla templates. No frameworks, default Joomla Bootstrap version but with tons of features and no coding skills required. , JA Simpli is perfect starter Joomla template that should meet all your requirements: from a simple to complex Joomla projects, personal blog to professional business portfolio site. The template layout is super flexible to adapt for any purpose with ease. With 4 premade Home variants, you have more choices to start with.<\\/p>\\n\\t\\t\\t\\t<p>Why Simpli? Well structured, lightweight, no framework, clean code, powerful theme customizer and layout manager. On top of that enhanced compatibility with 3rd party extensions. Already tested for Stackideas Joomla Extensions such as EasyBlog, EasySocial, EasyDiscuss and Komento.<\\/p>\\n\\t\\t\\t\\t<p>Copyright 2004 - 2017 <a href=\'\\/\\/www.joomlart.com\\/\' title=\'Visit Joomlart.com!\'>JoomlArt.com<\\/a>.<\\/p>\\n\\t\\t\\t<\\/div>\\n\\t\\t\\t<style>table.adminform{width: 100%;}<\\/style>\\n\\t\\t<\\/div>\\n\\t\\t\\n\\t\",\"group\":\"\",\"filename\":\"templateDetails\"}','{\"stylePreview\":\"\",\"styleBgColor\":\"#fff\",\"styleTextColor\":\"#101010\",\"styleLinkColor\":\"#3498db\",\"styleLinkHoverColor\":\"#303030\",\"styleGoogleFonts\":\"PT Sans:400,400italic,700,700italic\\r\\nIndie Flower\",\"styleBodyFont\":\"PT Sans\",\"styleBodyFontSize\":\"16px\",\"styleBodyFontWeight\":\"400\",\"styleLineHeight\":\"1.4\",\"styleHeadingFont\":\"PT Sans\",\"styleLogoImage\":\"\",\"styleLogoWidth\":\"205px\",\"styleLogoHeight\":\"90px\",\"styleHeaderBgColor\":\"#fff\",\"styleHeaderBorderColor\":\"#e0e0e0\",\"styleHeaderTextColor\":\"#101010\",\"styleHeaderLinkColor\":\"#101010\",\"styleHeaderLinkHoverColor\":\"#3498db\",\"styleMenuBgColor\":\"#fff\",\"styleMenuBorderColor\":\"#eee\",\"styleMenuColor\":\"#303030\",\"styleMenuHoverColor\":\"#303030\",\"styleMenuActiveColor\":\"#303030\",\"styleMenuBorderHoverColor\":\"#303030\",\"styleSubnavBgColor\":\"#fff\",\"styleSubnavTextColor\":\"#fff\",\"styleSubnavHoverBgColor\":\"#303030\",\"styleSubnavHoverColor\":\"#fff\",\"styleCollapseMenuColor\":\"#303030\",\"styleCollapseMenuHoverColor\":\"#303030\",\"styleCollapseActiveColor\":\"#004597\",\"styleSearchBgColor\":\"#303030\",\"styleSearchTextColor\":\"#e0e0e0\",\"styleFooterBgColor\":\"#fff\",\"styleFooterBorderColor\":\"#e0e0e0\",\"styleFooterTextColor\":\"#909090\",\"styleFooterLinkColor\":\"#3498db\",\"styleFooterLinkHoverColor\":\"#303030\",\"styleFooterMenuColor\":\"#303030\",\"styleFooterMenuHoverColor\":\"#303030\",\"styleModuleColor_1\":\"#303030\",\"styleModuleBg_1\":\"#FFFFFF\",\"styleModuleModules_1\":\"\",\"styleModuleColor_2\":\"#303030\",\"styleModuleBg_2\":\"#FFFFFF\",\"styleModuleModules_2\":\"\",\"styleModuleColor_3\":\"#303030\",\"styleModuleBg_3\":\"#FFFFFF\",\"styleModuleModules_3\":\"\",\"layoutContainer\":\"1\",\"layoutContainer_header\":\"\",\"layoutBackground_header\":\"\",\"layoutSticky_header\":\"0\",\"layoutWidth_header_left\":\"3\",\"layoutPos_header_right\":\"banner-top\",\"layoutWidth_header_right\":\"\",\"extraClass_header_right\":\"\",\"layoutContainer_nav\":\"\",\"layoutBackground_nav\":\"\",\"layoutSticky_nav\":\"0\",\"layoutPos_nav_left\":\"position-1\",\"layoutWidth_nav_left\":\"9\",\"layoutPos_nav_right\":\"position-0\",\"layoutWidth_nav_right\":\"\",\"layoutName_top_1\":\"\",\"layoutPos_top_1\":\"top-1\",\"layoutWidth_top_1\":\"\",\"layoutClass_top_1\":\"\",\"layoutTitle_top_1\":\"\",\"layoutDesc_top_1\":\"\",\"layoutContainer_top_1\":\"\",\"layoutBackground_top_1\":\"\",\"layoutName_top_2\":\"\",\"layoutPos_top_2\":\"top-2\",\"layoutWidth_top_2\":\"\",\"layoutClass_top_2\":\"\",\"layoutTitle_top_2\":\"\",\"layoutDesc_top_2\":\"\",\"layoutContainer_content\":\"\",\"layoutBackground_top_2\":\"\",\"layoutName_top_3\":\"\",\"layoutPos_top_3\":\"top-3\",\"layoutWidth_top_3\":\"\",\"layoutClass_top_3\":\"\",\"layoutTitle_top_3\":\"\",\"layoutDesc_top_3\":\"\",\"layoutContainer_top_3\":\"\",\"layoutBackground_top_3\":\"\",\"layoutName_top_4\":\"\",\"layoutPos_top_4\":\"top-4\",\"layoutWidth_top_4\":\"\",\"layoutClass_top_4\":\"\",\"layoutTitle_top_4\":\"\",\"layoutDesc_top_4\":\"\",\"layoutContainer_top_4\":\"\",\"layoutBackground_top_4\":\"\",\"layoutPosition_content\":\"left\",\"layoutBackground_content\":\"\",\"layoutPos_col_1\":\"position-7\",\"layoutWidth_col_1\":\"3\",\"layoutPos_col_2\":\"position-5\",\"layoutWidth_col_2\":\"3\",\"layoutName_bot_1\":\"\",\"layoutPos_bot_1\":\"bot-1\",\"layoutWidth_bot_1\":\"\",\"layoutClass_bot_1\":\"\",\"layoutTitle_bot_1\":\"\",\"layoutDesc_bot_1\":\"\",\"layoutContainer_bot_1\":\"\",\"layoutBackground_bot_1\":\"\",\"layoutName_bot_2\":\"\",\"layoutPos_bot_2\":\"bot-2\",\"layoutWidth_bot_2\":\"\",\"layoutClass_bot_2\":\"\",\"layoutTitle_bot_2\":\"\",\"layoutDesc_bot_2\":\"\",\"layoutContainer_bot_2\":\"\",\"layoutBackground_bot_2\":\"\",\"layoutName_bot_3\":\"\",\"layoutPos_bot_3\":\"bot-3\",\"layoutWidth_bot_3\":\"\",\"layoutClass_bot_3\":\"\",\"layoutTitle_bot_3\":\"\",\"layoutDesc_bot_3\":\"\",\"layoutContainer_bot_3\":\"\",\"layoutBackground_bot_3\":\"\",\"layoutName_bot_4\":\"\",\"layoutPos_bot_4\":\"bot-3\",\"layoutWidth_bot_4\":\"\",\"layoutClass_bot_4\":\"\",\"layoutTitle_bot_4\":\"\",\"layoutDesc_bot_4\":\"\",\"layoutContainer_bot_4\":\"\",\"layoutBackground_bot_4\":\"\",\"layoutPos_footer\":\"footer\",\"layoutWidth_footer\":\"\",\"layoutContainer_footer\":\"\",\"layoutBackground_footer\":\"\",\"advancedSiteEnable\":\"0\",\"advancedSiteName\":\"\",\"advancedSiteSlogan\":\"\",\"advancedCodeAfterHead\":\"\",\"advancedCodeBeforeHead\":\"\",\"advancedCodeBeforeBody\":\"\",\"advancedCodeAfterBody\":\"\"}','','',0,'0000-00-00 00:00:00',0,0);
 INSERT INTO `wmjg1_extensions` VALUES (10005,0,'plg_installer_webinstaller','plugin','webinstaller','installer',0,1,1,0,'{\"name\":\"plg_installer_webinstaller\",\"type\":\"plugin\",\"creationDate\":\"28 April 2017\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2013-2017 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"1.1.1\",\"description\":\"PLG_INSTALLER_WEBINSTALLER_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"webinstaller\"}','{\"tab_position\":\"0\"}','','',0,'0000-00-00 00:00:00',0,0);
 INSERT INTO `wmjg1_extensions` VALUES (10006,0,'plg_system_designit','plugin','designit','system',0,0,1,0,'{\"name\":\"plg_system_designit\",\"type\":\"plugin\",\"creationDate\":\"May 2016\",\"author\":\"JoomlArt\",\"copyright\":\"Copyright (C) 2005 - 2016 JoomlArt.com. All rights reserved.\",\"authorEmail\":\"admin@joomlart.com\",\"authorUrl\":\"www.joomlart.com\",\"version\":\"1.0.0\",\"description\":\"PLG_DESIGNIT_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"designit\"}','{\"app_id\":\"\",\"height\":\"100\",\"width\":\"100\",\"access\":\"3\",\"uploadimage\":\"0\"}','','',0,'0000-00-00 00:00:00',0,0);
+INSERT INTO `wmjg1_extensions` VALUES (10007,0,'com_sermonspeaker','component','com_sermonspeaker','',1,1,0,0,'{\"name\":\"com_sermonspeaker\",\"type\":\"component\",\"creationDate\":\"2017-10-14\",\"author\":\"Thomas Hunziker\",\"copyright\":\"\\u00a9 2017\",\"authorEmail\":\"admin@sermonspeaker.net\",\"authorUrl\":\"http:\\/\\/www.sermonspeaker.net\",\"version\":\"5.7.1\",\"description\":\"COM_SERMONSPEAKER_DESCRIPTION\",\"group\":\"\",\"filename\":\"sermonspeaker\"}','{\"col\":[\"sermons:scripture\",\"sermons:speaker\",\"sermons:date\",\"sermons:series\",\"sermons:player\",\"sermon:scripture\",\"sermon:speaker\",\"sermon:date\",\"sermon:series\",\"sermon:player\",\"sermon:notes\",\"sermon:addfile\",\"serie:scripture\",\"serie:speaker\",\"serie:date\",\"serie:player\",\"speaker:scripture\",\"speaker:date\",\"speaker:series\",\"speaker:player\",\"seriessermon:scripture\",\"seriessermon:speaker\",\"seriessermon:date\"],\"col_serie\":[\"series:speaker\",\"serie:description\",\"serie:speaker\",\"speaker:description\",\"seriessermon:description\",\"seriessermon:speaker\"],\"col_speaker\":[\"speakers:bio\",\"speaker:bio\",\"speaker:intro\"]}','','',0,'0000-00-00 00:00:00',0,0);
+INSERT INTO `wmjg1_extensions` VALUES (10008,0,'Latest Sermons','module','mod_latestsermons','',0,1,0,0,'{\"name\":\"Latest Sermons\",\"type\":\"module\",\"creationDate\":\"2016-05-15\",\"author\":\"Thomas Hunziker\",\"copyright\":\"\\u00a9 2017\",\"authorEmail\":\"admin@sermonspeaker.net\",\"authorUrl\":\"http:\\/\\/www.sermonspeaker.net\",\"version\":\"5.5.0\",\"description\":\"MOD_LATESTSERMONS_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"mod_latestsermons\"}','{\"mode\":\"0\",\"dir\":\"1\",\"ls_count\":\"3\",\"ls_mo_menuitem\":\"\",\"show_list\":\"1\",\"use_date\":\"0\",\"show_tooltip_title\":\"0\",\"show_category\":\"0\",\"ls_show_mo_speaker\":\"1\",\"ls_show_mo_series\":\"1\",\"ls_show_mo_date\":\"1\",\"ls_mo_date_format\":\"DATE_FORMAT_LC4\",\"show_hits\":\"0\",\"show_player\":\"0\",\"vheight\":\"300px\",\"ls_show_mo_link\":\"0\",\"smartfilter\":\"0\",\"filetype\":\"0\",\"cat_type\":\"sermons\",\"show_subcategory_content\":\"0\",\"layout\":\"_:default\",\"cache\":\"1\",\"cache_time\":\"900\",\"cachemode\":\"static\"}','','',0,'0000-00-00 00:00:00',0,0);
+INSERT INTO `wmjg1_extensions` VALUES (10009,0,'SermonCast','module','mod_sermoncast','',0,1,0,0,'{\"name\":\"SermonCast\",\"type\":\"module\",\"creationDate\":\"2016-09-30\",\"author\":\"Thomas Hunziker, Martin Hess\",\"copyright\":\"\\u00a9 2017\",\"authorEmail\":\"admin@sermonspeaker.net\",\"authorUrl\":\"http:\\/\\/www.sermonspeaker.net\",\"version\":\"5.3.2\",\"description\":\"MOD_SERMONCAST_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"mod_sermoncast\"}','{\"sc_introtext\":\"\",\"sc_type\":\"\",\"sc_showpcast\":\"1\",\"sc_otherimage\":\"\",\"sc_pcast_prefix\":\"itpc\",\"sc_otherlink\":\"\",\"sc_showplink\":\"1\",\"sc_showhelp\":\"0\",\"sc_helpcontent\":\"0\",\"layout\":\"_:default\",\"cache\":\"1\",\"cache_time\":\"900\",\"cachemode\":\"static\"}','','',0,'0000-00-00 00:00:00',0,0);
+INSERT INTO `wmjg1_extensions` VALUES (10010,0,'MOD_SERMONSPEAKER','module','mod_sermonspeaker','',0,1,0,0,'{\"name\":\"MOD_SERMONSPEAKER\",\"type\":\"module\",\"creationDate\":\"2015-06-02\",\"author\":\"Thomas Hunziker\",\"copyright\":\"\\u00a9 2017\",\"authorEmail\":\"admin@sermonspeaker.net\",\"authorUrl\":\"http:\\/\\/www.sermonspeaker.net\",\"version\":\"5.4.0\",\"description\":\"MOD_SERMONSPEAKER_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"mod_sermonspeaker\"}','{\"mode\":\"0\",\"sort\":\"0\",\"limit\":\"0\",\"tooltip\":\"1\",\"menuitem\":\"\",\"cache\":\"1\",\"cache_time\":\"900\",\"cachemode\":\"static\"}','','',0,'0000-00-00 00:00:00',0,0);
+INSERT INTO `wmjg1_extensions` VALUES (10011,0,'MOD_SERMONSPEAKER','module','mod_sermonspeaker','',1,1,2,0,'{\"name\":\"MOD_SERMONSPEAKER\",\"type\":\"module\",\"creationDate\":\"2015-06-29\",\"author\":\"Thomas Hunziker\",\"copyright\":\"\\u00a9 2017\",\"authorEmail\":\"admin@sermonspeaker.net\",\"authorUrl\":\"http:\\/\\/www.sermonspeaker.net\",\"version\":\"1.0.0\",\"description\":\"MOD_SERMONSPEAKER_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"mod_sermonspeaker\"}','{\"count\":\"2\",\"ordering\":\"hits\",\"direction\":\"0\",\"show_hits\":\"0\",\"show_state\":\"1\",\"show_author\":\"1\"}','','',0,'0000-00-00 00:00:00',0,0);
+INSERT INTO `wmjg1_extensions` VALUES (10012,0,'MOD_SERMONUPLOAD','module','mod_sermonupload','',0,1,0,0,'{\"name\":\"MOD_SERMONUPLOAD\",\"type\":\"module\",\"creationDate\":\"2017-09-25\",\"author\":\"Thomas Hunziker\",\"copyright\":\"\\u00a9 2017\",\"authorEmail\":\"admin@sermonspeaker.net\",\"authorUrl\":\"http:\\/\\/www.sermonspeaker.net\",\"version\":\"1.0.1\",\"description\":\"MOD_SERMONUPLOAD_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"mod_sermonupload\"}','{\"cache\":\"1\",\"cache_time\":\"900\",\"cachemode\":\"static\"}','','',0,'0000-00-00 00:00:00',0,0);
+INSERT INTO `wmjg1_extensions` VALUES (10013,0,'plg_content_sermonspeaker','plugin','sermonspeaker','content',0,0,1,0,'{\"name\":\"plg_content_sermonspeaker\",\"type\":\"plugin\",\"creationDate\":\"2016-03-28\",\"author\":\"Thomas Hunziker\",\"copyright\":\"\\u00a9 2017\",\"authorEmail\":\"admin@sermonspeaker.net\",\"authorUrl\":\"http:\\/\\/www.sermonspeaker.net\",\"version\":\"5.3.1\",\"description\":\"PLG_CONTENT_SERMONSPEAKER_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"sermonspeaker\"}','{\"mode\":\"1\",\"show_player\":\"0\"}','','',0,'0000-00-00 00:00:00',0,0);
+INSERT INTO `wmjg1_extensions` VALUES (10014,0,'plg_editors-xtd_sermonspeaker','plugin','sermonspeaker','editors-xtd',0,0,1,0,'{\"name\":\"plg_editors-xtd_sermonspeaker\",\"type\":\"plugin\",\"creationDate\":\"2015-03-13\",\"author\":\"Thomas Hunziker\",\"copyright\":\"\\u00a9 2017\",\"authorEmail\":\"admin@sermonspeaker.net\",\"authorUrl\":\"http:\\/\\/www.sermonspeaker.net\",\"version\":\"5.3.0\",\"description\":\"PLG_EDITORS-XTD_SERMONSPEAKER_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"sermonspeaker\"}','{\"mode\":\"0\"}','','',0,'0000-00-00 00:00:00',0,0);
+INSERT INTO `wmjg1_extensions` VALUES (10015,0,'plg_finder_sermonspeaker','plugin','sermonspeaker','finder',0,0,1,0,'{\"name\":\"plg_finder_sermonspeaker\",\"type\":\"plugin\",\"creationDate\":\"2016-03-28\",\"author\":\"Thomas Hunziker\",\"copyright\":\"\\u00a9 2017\",\"authorEmail\":\"admin@sermonspeaker.net\",\"authorUrl\":\"http:\\/\\/www.sermonspeaker.net\",\"version\":\"5.3.1\",\"description\":\"PLG_FINDER_SERMONSPEAKER_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"sermonspeaker\"}','{}','','',0,'0000-00-00 00:00:00',0,0);
+INSERT INTO `wmjg1_extensions` VALUES (10016,0,'plg_quickicon_sermonspeaker','plugin','sermonspeaker','quickicon',0,0,1,0,'{\"name\":\"plg_quickicon_sermonspeaker\",\"type\":\"plugin\",\"creationDate\":\"2015-06-29\",\"author\":\"Thomas Hunziker\",\"copyright\":\"\\u00a9 2017\",\"authorEmail\":\"admin@sermonspeaker.net\",\"authorUrl\":\"http:\\/\\/www.sermonspeaker.net\",\"version\":\"1.0.0\",\"description\":\"PLG_QUICKICON_SERMONSPEAKER_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"sermonspeaker\"}','{\"context\":\"mod_quickicon\",\"sermons\":\"1\",\"speakers\":\"1\",\"series\":\"1\"}','','',0,'0000-00-00 00:00:00',0,0);
+INSERT INTO `wmjg1_extensions` VALUES (10017,0,'Search - SermonSpeaker','plugin','sermonspeaker','search',0,0,1,0,'{\"name\":\"Search - SermonSpeaker\",\"type\":\"plugin\",\"creationDate\":\"2017-01-24\",\"author\":\"Thomas Hunziker\",\"copyright\":\"\\u00a9 2017\",\"authorEmail\":\"admin@sermonspeaker.net\",\"authorUrl\":\"http:\\/\\/www.sermonspeaker.net\",\"version\":\"5.6.0\",\"description\":\"PLG_SEARCH_SERMONSPEAKER_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"sermonspeaker\"}','{\"search_limit\":\"50\",\"search_content\":\"1\",\"search_archived\":\"0\",\"search_series\":\"1\",\"search_speakers\":\"1\",\"sermons_speaker\":\"0\"}','','',0,'0000-00-00 00:00:00',0,0);
+INSERT INTO `wmjg1_extensions` VALUES (10018,0,'plg_sermonspeaker_jwplayer7','plugin','jwplayer7','sermonspeaker',0,0,1,0,'{\"name\":\"plg_sermonspeaker_jwplayer7\",\"type\":\"plugin\",\"creationDate\":\"2017-04-25\",\"author\":\"Thomas Hunziker\",\"copyright\":\"\\u00a9 2017\",\"authorEmail\":\"admin@sermonspeaker.net\",\"authorUrl\":\"http:\\/\\/www.sermonspeaker.net\",\"version\":\"5.4.4\",\"description\":\"PLG_SERMONSPEAKER_JWPLAYER7_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"jwplayer7\"}','{\"hosting\":\"0\",\"autostart\":\"0\",\"fileprio\":\"0\",\"filetoggle\":\"0\",\"mode\":\"1\",\"ga\":\"0\",\"share\":\"0\",\"skin\":\"seven\",\"awidth\":\"100%\",\"aheight\":\"33px\",\"responsive\":\"0\",\"vwidth\":\"100%\",\"vheight\":\"300px\",\"aspectratio\":\"4:3\"}','','',0,'0000-00-00 00:00:00',0,0);
+INSERT INTO `wmjg1_extensions` VALUES (10019,0,'plg_sermonspeaker_pixelout','plugin','pixelout','sermonspeaker',0,0,1,0,'{\"name\":\"plg_sermonspeaker_pixelout\",\"type\":\"plugin\",\"creationDate\":\"2015-03-12\",\"author\":\"Thomas Hunziker\",\"copyright\":\"\\u00a9 2017\",\"authorEmail\":\"admin@sermonspeaker.net\",\"authorUrl\":\"http:\\/\\/www.sermonspeaker.net\",\"version\":\"5.3.0\",\"description\":\"PLG_SERMONSPEAKER_PIXELOUT_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"pixelout\"}','{\"autostart\":\"0\",\"awidth\":\"100%\"}','','',0,'0000-00-00 00:00:00',0,0);
+INSERT INTO `wmjg1_extensions` VALUES (10020,0,'Related Sermons','module','mod_related_sermons','',0,1,0,0,'{\"name\":\"Related Sermons\",\"type\":\"module\",\"creationDate\":\"2016-03-28\",\"author\":\"Thomas Hunziker\",\"copyright\":\"\\u00a9 2017\",\"authorEmail\":\"admin@sermonspeaker.net\",\"authorUrl\":\"http:\\/\\/www.sermonspeaker.net\",\"version\":\"5.4.1\",\"description\":\"MOD_RELATED_SERMONS_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"mod_related_sermons\"}','{\"showDate\":\"0\",\"supportArticles\":\"0\",\"limitSermons\":\"10\",\"orderBy\":\"NameAsc\",\"owncache\":\"1\",\"cache_time\":\"900\"}','','',0,'0000-00-00 00:00:00',0,0);
+INSERT INTO `wmjg1_extensions` VALUES (10021,0,'Sermons Archive','module','mod_sermonarchive','',0,1,0,0,'{\"name\":\"Sermons Archive\",\"type\":\"module\",\"creationDate\":\"2016-03-28\",\"author\":\"Thomas Hunziker, Rajesh K\",\"copyright\":\"\\u00a9 2017\",\"authorEmail\":\"admin@sermonspeaker.net\",\"authorUrl\":\"http:\\/\\/www.sermonspeaker.net\",\"version\":\"5.5.0\",\"description\":\"MOD_SERMONARCHIVE_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"mod_sermonarchive\"}','{\"archive_count\":\"\",\"archive_switch\":\"month\",\"menuitem\":\"\",\"state\":\"1\",\"cache\":\"1\",\"cache_time\":\"900\",\"cachemode\":\"static\"}','','',0,'0000-00-00 00:00:00',0,0);
 /*!40000 ALTER TABLE `wmjg1_extensions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1832,7 +1861,7 @@ CREATE TABLE `wmjg1_menu` (
   KEY `idx_alias` (`alias`(100)),
   KEY `idx_path` (`path`(100)),
   KEY `idx_language` (`language`)
-) ENGINE=InnoDB AUTO_INCREMENT=102 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=110 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1841,7 +1870,7 @@ CREATE TABLE `wmjg1_menu` (
 
 LOCK TABLES `wmjg1_menu` WRITE;
 /*!40000 ALTER TABLE `wmjg1_menu` DISABLE KEYS */;
-INSERT INTO `wmjg1_menu` VALUES (1,'','Menu_Item_Root','root','','','','',1,0,0,0,0,'0000-00-00 00:00:00',0,0,'',0,'',0,43,0,'*',0);
+INSERT INTO `wmjg1_menu` VALUES (1,'','Menu_Item_Root','root','','','','',1,0,0,0,0,'0000-00-00 00:00:00',0,0,'',0,'',0,59,0,'*',0);
 INSERT INTO `wmjg1_menu` VALUES (2,'main','com_banners','Banners','','Banners','index.php?option=com_banners','component',1,1,1,4,0,'0000-00-00 00:00:00',0,0,'class:banners',0,'',1,10,0,'*',1);
 INSERT INTO `wmjg1_menu` VALUES (3,'main','com_banners','Banners','','Banners/Banners','index.php?option=com_banners','component',1,2,2,4,0,'0000-00-00 00:00:00',0,0,'class:banners',0,'',2,3,0,'*',1);
 INSERT INTO `wmjg1_menu` VALUES (4,'main','com_banners_categories','Categories','','Banners/Categories','index.php?option=com_categories&extension=com_banners','component',1,2,2,6,0,'0000-00-00 00:00:00',0,0,'class:banners-cat',0,'',4,5,0,'*',1);
@@ -1863,6 +1892,14 @@ INSERT INTO `wmjg1_menu` VALUES (20,'main','com_tags','Tags','','Tags','index.ph
 INSERT INTO `wmjg1_menu` VALUES (21,'main','com_postinstall','Post-installation messages','','Post-installation messages','index.php?option=com_postinstall','component',1,1,1,32,0,'0000-00-00 00:00:00',0,1,'class:postinstall',0,'',37,38,0,'*',1);
 INSERT INTO `wmjg1_menu` VALUES (22,'main','com_associations','Multilingual Associations','','Multilingual Associations','index.php?option=com_associations','component',1,1,1,34,0,'0000-00-00 00:00:00',0,0,'class:associations',0,'',39,40,0,'*',1);
 INSERT INTO `wmjg1_menu` VALUES (101,'mainmenu','Home','home','','home','index.php?option=com_content&view=featured','component',1,1,1,22,0,'0000-00-00 00:00:00',0,1,'',9,'{\"featured_categories\":[\"\"],\"layout_type\":\"blog\",\"num_leading_articles\":\"1\",\"num_intro_articles\":\"3\",\"num_columns\":\"3\",\"num_links\":\"0\",\"multi_column_order\":\"1\",\"orderby_pri\":\"\",\"orderby_sec\":\"front\",\"order_date\":\"\",\"show_pagination\":\"2\",\"show_pagination_results\":\"1\",\"show_title\":\"\",\"link_titles\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_vote\":\"\",\"show_readmore\":\"\",\"show_readmore_title\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"show_feed_link\":\"1\",\"feed_summary\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":1,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',41,42,1,'*',0);
+INSERT INTO `wmjg1_menu` VALUES (102,'main','COM_SERMONSPEAKER','com-sermonspeaker','','com-sermonspeaker','index.php?option=com_sermonspeaker','component',1,1,1,10007,0,'0000-00-00 00:00:00',0,1,'components/com_sermonspeaker/images/speakers-16.png',0,'{}',43,58,0,'',1);
+INSERT INTO `wmjg1_menu` VALUES (103,'main','COM_SERMONSPEAKER_MENU_SERIES','com-sermonspeaker-menu-series','','com-sermonspeaker/com-sermonspeaker-menu-series','index.php?option=com_sermonspeaker&view=series','component',1,102,2,10007,0,'0000-00-00 00:00:00',0,1,'components/com_sermonspeaker/images/series-16.png',0,'{}',44,45,0,'',1);
+INSERT INTO `wmjg1_menu` VALUES (104,'main','COM_SERMONSPEAKER_MENU_SPEAKERS','com-sermonspeaker-menu-speakers','','com-sermonspeaker/com-sermonspeaker-menu-speakers','index.php?option=com_sermonspeaker&view=speakers','component',1,102,2,10007,0,'0000-00-00 00:00:00',0,1,'components/com_sermonspeaker/images/speakers-16.png',0,'{}',46,47,0,'',1);
+INSERT INTO `wmjg1_menu` VALUES (105,'main','COM_SERMONSPEAKER_MENU_SERMONS','com-sermonspeaker-menu-sermons','','com-sermonspeaker/com-sermonspeaker-menu-sermons','index.php?option=com_sermonspeaker&view=sermons','component',1,102,2,10007,0,'0000-00-00 00:00:00',0,1,'components/com_sermonspeaker/images/sermon-16.png',0,'{}',48,49,0,'',1);
+INSERT INTO `wmjg1_menu` VALUES (106,'main','COM_SERMONSPEAKER_MENU_CATEGORY','com-sermonspeaker-menu-category','','com-sermonspeaker/com-sermonspeaker-menu-category','index.php?option=com_categories&extension=com_sermonspeaker','component',1,102,2,10007,0,'0000-00-00 00:00:00',0,1,'class:category',0,'{}',50,51,0,'',1);
+INSERT INTO `wmjg1_menu` VALUES (107,'main','COM_SERMONSPEAKER_MENU_TOOLS','com-sermonspeaker-menu-tools','','com-sermonspeaker/com-sermonspeaker-menu-tools','index.php?option=com_sermonspeaker&view=tools','component',1,102,2,10007,0,'0000-00-00 00:00:00',0,1,'components/com_sermonspeaker/images/tools-16.png',0,'{}',52,53,0,'',1);
+INSERT INTO `wmjg1_menu` VALUES (108,'main','COM_SERMONSPEAKER_MENU_LANGUAGES','com-sermonspeaker-menu-languages','','com-sermonspeaker/com-sermonspeaker-menu-languages','index.php?option=com_sermonspeaker&view=languages','component',1,102,2,10007,0,'0000-00-00 00:00:00',0,1,'components/com_sermonspeaker/images/globe-16.png',0,'{}',54,55,0,'',1);
+INSERT INTO `wmjg1_menu` VALUES (109,'main','COM_SERMONSPEAKER_MENU_HELP','com-sermonspeaker-menu-help','','com-sermonspeaker/com-sermonspeaker-menu-help','index.php?option=com_sermonspeaker&view=help','component',1,102,2,10007,0,'0000-00-00 00:00:00',0,1,'components/com_sermonspeaker/images/help-16.png',0,'{}',56,57,0,'',1);
 /*!40000 ALTER TABLE `wmjg1_menu` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1980,7 +2017,7 @@ CREATE TABLE `wmjg1_modules` (
   KEY `published` (`published`,`access`),
   KEY `newsfeeds` (`module`,`published`),
   KEY `idx_language` (`language`)
-) ENGINE=InnoDB AUTO_INCREMENT=88 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=95 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2005,6 +2042,13 @@ INSERT INTO `wmjg1_modules` VALUES (17,51,'Breadcrumbs','','',1,'position-2',0,'
 INSERT INTO `wmjg1_modules` VALUES (79,52,'Multilanguage status','','',1,'status',0,'0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',0,'mod_multilangstatus',3,1,'{\"layout\":\"_:default\",\"moduleclass_sfx\":\"\",\"cache\":\"0\"}',1,'*');
 INSERT INTO `wmjg1_modules` VALUES (86,53,'Joomla Version','','',1,'footer',0,'0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',1,'mod_version',3,1,'{\"format\":\"short\",\"product\":\"1\",\"layout\":\"_:default\",\"moduleclass_sfx\":\"\",\"cache\":\"0\"}',1,'*');
 INSERT INTO `wmjg1_modules` VALUES (87,55,'Sample Data','','',0,'cpanel',0,'0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',1,'mod_sampledata',6,1,'{}',1,'*');
+INSERT INTO `wmjg1_modules` VALUES (88,59,'Latest Sermons','','',0,'',0,'0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',0,'mod_latestsermons',1,1,'',0,'*');
+INSERT INTO `wmjg1_modules` VALUES (89,60,'SermonCast','','',0,'',0,'0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',0,'mod_sermoncast',1,1,'',0,'*');
+INSERT INTO `wmjg1_modules` VALUES (90,61,'SermonSpeaker Module','','',0,'',0,'0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',0,'mod_sermonspeaker',1,1,'',0,'*');
+INSERT INTO `wmjg1_modules` VALUES (91,62,'SermonSpeaker Administrator Module','','',0,'',0,'0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',0,'mod_sermonspeaker',1,1,'',1,'*');
+INSERT INTO `wmjg1_modules` VALUES (92,63,'SermonSpeaker Upload Module','','',0,'',0,'0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',0,'mod_sermonupload',1,1,'',0,'*');
+INSERT INTO `wmjg1_modules` VALUES (93,64,'Related Sermons','','',0,'',0,'0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',0,'mod_related_sermons',1,1,'',0,'*');
+INSERT INTO `wmjg1_modules` VALUES (94,65,'Sermons Archive','','',0,'',0,'0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',0,'mod_sermonarchive',1,1,'',0,'*');
 /*!40000 ALTER TABLE `wmjg1_modules` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2227,7 +2271,192 @@ CREATE TABLE `wmjg1_schemas` (
 LOCK TABLES `wmjg1_schemas` WRITE;
 /*!40000 ALTER TABLE `wmjg1_schemas` DISABLE KEYS */;
 INSERT INTO `wmjg1_schemas` VALUES (700,'3.8.2-2017-10-14');
+INSERT INTO `wmjg1_schemas` VALUES (10007,'5.5.0');
 /*!40000 ALTER TABLE `wmjg1_schemas` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `wmjg1_sermon_scriptures`
+--
+
+DROP TABLE IF EXISTS `wmjg1_sermon_scriptures`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `wmjg1_sermon_scriptures` (
+  `book` int(3) NOT NULL DEFAULT '0',
+  `cap1` int(3) NOT NULL DEFAULT '0',
+  `vers1` int(4) NOT NULL DEFAULT '0',
+  `cap2` int(3) NOT NULL DEFAULT '0',
+  `vers2` int(4) NOT NULL DEFAULT '0',
+  `text` mediumtext NOT NULL,
+  `ordering` int(11) NOT NULL DEFAULT '0',
+  `sermon_id` int(10) NOT NULL DEFAULT '0'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wmjg1_sermon_scriptures`
+--
+
+LOCK TABLES `wmjg1_sermon_scriptures` WRITE;
+/*!40000 ALTER TABLE `wmjg1_sermon_scriptures` DISABLE KEYS */;
+/*!40000 ALTER TABLE `wmjg1_sermon_scriptures` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `wmjg1_sermon_series`
+--
+
+DROP TABLE IF EXISTS `wmjg1_sermon_series`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `wmjg1_sermon_series` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `alias` varchar(255) NOT NULL,
+  `series_description` mediumtext NOT NULL,
+  `state` tinyint(3) NOT NULL DEFAULT '0',
+  `publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `home` tinyint(3) NOT NULL DEFAULT '0',
+  `ordering` int(11) NOT NULL DEFAULT '0',
+  `hits` int(10) NOT NULL DEFAULT '0',
+  `created` datetime DEFAULT '0000-00-00 00:00:00',
+  `created_by` int(10) NOT NULL DEFAULT '0',
+  `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `modified_by` int(10) NOT NULL DEFAULT '0',
+  `avatar` text,
+  `catid` int(10) NOT NULL DEFAULT '0',
+  `metakey` text NOT NULL,
+  `metadesc` text NOT NULL,
+  `metadata` text NOT NULL,
+  `checked_out` int(11) NOT NULL DEFAULT '0',
+  `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `zip_created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `zip_content` text NOT NULL,
+  `zip_progress` int(11) NOT NULL DEFAULT '0',
+  `zip_state` tinyint(3) NOT NULL DEFAULT '0',
+  `zip_size` int(11) NOT NULL DEFAULT '0',
+  `zip_dl` tinyint(3) NOT NULL DEFAULT '0',
+  `language` char(7) NOT NULL DEFAULT '*',
+  `version` int(10) unsigned NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wmjg1_sermon_series`
+--
+
+LOCK TABLES `wmjg1_sermon_series` WRITE;
+/*!40000 ALTER TABLE `wmjg1_sermon_series` DISABLE KEYS */;
+INSERT INTO `wmjg1_sermon_series` VALUES (1,'General Topics','general-topics','Topics of general interest.',1,'0000-00-00 00:00:00','0000-00-00 00:00:00',1,1,0,'2006-03-28 00:00:00',0,'0000-00-00 00:00:00',0,NULL,8,'','','',0,'0000-00-00 00:00:00','0000-00-00 00:00:00','',0,0,0,0,'*',1);
+/*!40000 ALTER TABLE `wmjg1_sermon_series` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `wmjg1_sermon_sermons`
+--
+
+DROP TABLE IF EXISTS `wmjg1_sermon_sermons`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `wmjg1_sermon_sermons` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `speaker_id` int(10) NOT NULL DEFAULT '0',
+  `series_id` int(10) NOT NULL DEFAULT '0',
+  `audiofile` text NOT NULL,
+  `videofile` text NOT NULL,
+  `audiofilesize` int(11) NOT NULL DEFAULT '0',
+  `videofilesize` int(11) NOT NULL DEFAULT '0',
+  `picture` text NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `alias` varchar(255) NOT NULL,
+  `sermon_number` int(10) NOT NULL DEFAULT '0',
+  `custom1` mediumtext NOT NULL,
+  `custom2` mediumtext NOT NULL,
+  `sermon_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `sermon_time` time NOT NULL DEFAULT '00:00:00',
+  `notes` longtext NOT NULL,
+  `state` tinyint(3) NOT NULL DEFAULT '0',
+  `publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `ordering` int(11) NOT NULL DEFAULT '0',
+  `hits` int(10) NOT NULL DEFAULT '0',
+  `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created_by` int(10) NOT NULL DEFAULT '0',
+  `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `modified_by` int(10) NOT NULL DEFAULT '0',
+  `podcast` tinyint(1) NOT NULL DEFAULT '0',
+  `addfile` text NOT NULL,
+  `addfileDesc` varchar(255) NOT NULL,
+  `catid` int(10) NOT NULL DEFAULT '0',
+  `metakey` text NOT NULL,
+  `metadesc` text NOT NULL,
+  `metadata` text NOT NULL,
+  `checked_out` int(11) NOT NULL DEFAULT '0',
+  `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `language` char(7) NOT NULL DEFAULT '*',
+  `version` int(10) unsigned NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wmjg1_sermon_sermons`
+--
+
+LOCK TABLES `wmjg1_sermon_sermons` WRITE;
+/*!40000 ALTER TABLE `wmjg1_sermon_sermons` DISABLE KEYS */;
+INSERT INTO `wmjg1_sermon_sermons` VALUES (1,1,1,'/components/com_sermonspeaker/media/default_sermon.mp3','',0,0,'','The Sin of Booze','the-sin-of-booze',1,'','','2006-03-28 00:00:00','00:00:05','Borrowed from sermonaudio.com',1,'0000-00-00 00:00:00','0000-00-00 00:00:00',1,0,'2006-03-28 00:00:00',0,'0000-00-00 00:00:00',0,0,'','',8,'','','',0,'0000-00-00 00:00:00','*',1);
+/*!40000 ALTER TABLE `wmjg1_sermon_sermons` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `wmjg1_sermon_speakers`
+--
+
+DROP TABLE IF EXISTS `wmjg1_sermon_speakers`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `wmjg1_sermon_speakers` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `alias` varchar(255) NOT NULL,
+  `website` text,
+  `intro` mediumtext,
+  `bio` mediumtext,
+  `pic` text,
+  `state` tinyint(3) NOT NULL DEFAULT '0',
+  `publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `home` tinyint(3) NOT NULL DEFAULT '0',
+  `ordering` int(11) NOT NULL DEFAULT '0',
+  `hits` int(10) NOT NULL DEFAULT '0',
+  `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created_by` int(10) NOT NULL DEFAULT '0',
+  `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `modified_by` int(10) NOT NULL DEFAULT '0',
+  `catid` int(10) NOT NULL DEFAULT '0',
+  `metakey` text NOT NULL,
+  `metadesc` text NOT NULL,
+  `metadata` text NOT NULL,
+  `checked_out` int(11) NOT NULL DEFAULT '0',
+  `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `language` char(7) NOT NULL DEFAULT '*',
+  `version` int(10) unsigned NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wmjg1_sermon_speakers`
+--
+
+LOCK TABLES `wmjg1_sermon_speakers` WRITE;
+/*!40000 ALTER TABLE `wmjg1_sermon_speakers` DISABLE KEYS */;
+INSERT INTO `wmjg1_sermon_speakers` VALUES (1,'Billy Sunday','billy-sunday','http://www.sermonspeaker.net','Billy Sunday died in Chicago, November 6, 1935; services were held in the Moody Memorial Church with 4,400 present. Take 15 minutes each day to listen to God talking to you; take 15 minutes each day to talk to God; take 15 minutes each day to talk to others about God.','This young convert was deeply impressed and determined to make these the rules of his life. From that day onward throughout his life he made it a rule to spend the first moments of his day alone with God and God\'s Word. Before he read a letter, looked at a paper or even read a telegram, he went first to the Bible, that the first impression of the day might be what he got directly from God.','components/com_sermonspeaker/media/default_speaker.jpg',1,'0000-00-00 00:00:00','0000-00-00 00:00:00',1,1,0,'2006-03-28 00:00:00',0,'0000-00-00 00:00:00',0,8,'','','',0,'0000-00-00 00:00:00','*',1);
+/*!40000 ALTER TABLE `wmjg1_sermon_speakers` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -2257,8 +2486,7 @@ CREATE TABLE `wmjg1_session` (
 
 LOCK TABLES `wmjg1_session` WRITE;
 /*!40000 ALTER TABLE `wmjg1_session` DISABLE KEYS */;
-INSERT INTO `wmjg1_session` VALUES ('gahj0linpv789ugvet198gkbl3',0,1,'1514906926','joomla|s:736:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aTozO3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTUxNDkwNjUzMjtzOjQ6Imxhc3QiO2k6MTUxNDkwNjkwNztzOjM6Im5vdyI7aToxNTE0OTA2OTI2O31zOjU6InRva2VuIjtzOjMyOiJhaE5jaW9IS0NiZmxYcHlFUEMzd3UwZjM3OXFlOUhKMiI7fXM6ODoicmVnaXN0cnkiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mzp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjowOnt9czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7aTowO319fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fQ==\";',0,'');
-INSERT INTO `wmjg1_session` VALUES ('i753cao0ocqr04crabdl8mb3a2',1,0,'1514907395','joomla|s:6700:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo0OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aTozNTtzOjU6InRpbWVyIjtPOjg6InN0ZENsYXNzIjozOntzOjU6InN0YXJ0IjtpOjE1MTQ5MDYxNTY7czo0OiJsYXN0IjtpOjE1MTQ5MDczODk7czozOiJub3ciO2k6MTUxNDkwNzM4OTt9czo1OiJ0b2tlbiI7czozMjoiWTltNzZmTVZka1lpRXFRV2RSWkhuaVRWYVpwcFpQb1AiO31zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6NDp7czoxMDoiY29tX2NvbmZpZyI7Tzo4OiJzdGRDbGFzcyI6MTp7czo2OiJjb25maWciO086ODoic3RkQ2xhc3MiOjE6e3M6NjoiZ2xvYmFsIjtPOjg6InN0ZENsYXNzIjoxOntzOjQ6ImRhdGEiO2E6OTY6e3M6MTM6ImNhY2hlX2hhbmRsZXIiO3M6NDoiZmlsZSI7czoxMDoiY2FjaGVfcGF0aCI7czowOiIiO3M6MTY6Im1lbWNhY2hlX3BlcnNpc3QiO2k6MTtzOjE3OiJtZW1jYWNoZV9jb21wcmVzcyI7aTowO3M6MjA6Im1lbWNhY2hlX3NlcnZlcl9ob3N0IjtzOjk6ImxvY2FsaG9zdCI7czoyMDoibWVtY2FjaGVfc2VydmVyX3BvcnQiO2k6MTEyMTE7czoxNzoibWVtY2FjaGVkX3BlcnNpc3QiO2k6MTtzOjE4OiJtZW1jYWNoZWRfY29tcHJlc3MiO2k6MDtzOjIxOiJtZW1jYWNoZWRfc2VydmVyX2hvc3QiO3M6OToibG9jYWxob3N0IjtzOjIxOiJtZW1jYWNoZWRfc2VydmVyX3BvcnQiO2k6MTEyMTE7czoxMzoicmVkaXNfcGVyc2lzdCI7aToxO3M6MTc6InJlZGlzX3NlcnZlcl9ob3N0IjtzOjk6ImxvY2FsaG9zdCI7czoxNzoicmVkaXNfc2VydmVyX3BvcnQiO2k6NjM3OTtzOjE3OiJyZWRpc19zZXJ2ZXJfYXV0aCI7czowOiIiO3M6MTU6InJlZGlzX3NlcnZlcl9kYiI7aTowO3M6OToiY2FjaGV0aW1lIjtpOjE1O3M6MjA6ImNhY2hlX3BsYXRmb3JtcHJlZml4IjtpOjA7czo3OiJjYWNoaW5nIjtpOjA7czo2OiJkYnR5cGUiO3M6NjoibXlzcWxpIjtzOjQ6Imhvc3QiO3M6OToibG9jYWxob3N0IjtzOjQ6InVzZXIiO3M6NDoicm9vdCI7czoyOiJkYiI7czo1OiJncmFjZSI7czo4OiJkYnByZWZpeCI7czo2OiJ3bWpnMV8iO3M6NToiZGVidWciO2k6MDtzOjEwOiJkZWJ1Z19sYW5nIjtpOjA7czoxMDoiZnRwX2VuYWJsZSI7aTowO3M6ODoiZnRwX2hvc3QiO3M6MDoiIjtzOjg6ImZ0cF9wb3J0IjtzOjA6IiI7czo4OiJmdHBfdXNlciI7czowOiIiO3M6ODoiZnRwX3Bhc3MiO3M6MDoiIjtzOjg6ImZ0cF9yb290IjtzOjA6IiI7czoxMjoicHJveHlfZW5hYmxlIjtpOjA7czoxMDoicHJveHlfaG9zdCI7czowOiIiO3M6MTA6InByb3h5X3BvcnQiO3M6MDoiIjtzOjEwOiJwcm94eV91c2VyIjtzOjA6IiI7czoxMDoicHJveHlfcGFzcyI7czowOiIiO3M6Njoib2Zmc2V0IjtzOjExOiJFdXJvcGUvS2lldiI7czoxMDoibWFpbG9ubGluZSI7aToxO3M6MTE6Im1hc3NtYWlsb2ZmIjtpOjA7czo4OiJtYWlsZnJvbSI7czoxODoidmlkaXZhbmFAZ21haWwuY29tIjtzOjg6ImZyb21uYW1lIjtzOjEyOiLQptC10YDQutCy0LAiO3M6NzoicmVwbHl0byI7czowOiIiO3M6MTE6InJlcGx5dG9uYW1lIjtzOjA6IiI7czo2OiJtYWlsZXIiO3M6NDoibWFpbCI7czo4OiJzZW5kbWFpbCI7czoxODoiL3Vzci9zYmluL3NlbmRtYWlsIjtzOjg6InNtdHBob3N0IjtzOjk6ImxvY2FsaG9zdCI7czo4OiJzbXRwcG9ydCI7aToyNTtzOjEwOiJzbXRwc2VjdXJlIjtzOjQ6Im5vbmUiO3M6ODoic210cGF1dGgiO2k6MDtzOjg6InNtdHB1c2VyIjtzOjA6IiI7czo4OiJzbXRwcGFzcyI7czowOiIiO3M6ODoiTWV0YURlc2MiO3M6MDoiIjtzOjg6Ik1ldGFLZXlzIjtzOjA6IiI7czo2OiJyb2JvdHMiO3M6MDoiIjtzOjEwOiJNZXRhUmlnaHRzIjtzOjA6IiI7czoxMDoiTWV0YUF1dGhvciI7aToxO3M6MTE6Ik1ldGFWZXJzaW9uIjtpOjA7czozOiJzZWYiO2k6MTtzOjExOiJzZWZfcmV3cml0ZSI7aTowO3M6MTA6InNlZl9zdWZmaXgiO2k6MDtzOjEyOiJ1bmljb2Rlc2x1Z3MiO2k6MDtzOjE5OiJzaXRlbmFtZV9wYWdldGl0bGVzIjtpOjA7czo4OiJ0bXBfcGF0aCI7czozOiJ0bXAiO3M6NDoiZ3ppcCI7aTowO3M6MTU6ImVycm9yX3JlcG9ydGluZyI7czoxMToiZGV2ZWxvcG1lbnQiO3M6OToiZm9yY2Vfc3NsIjtpOjA7czoxNToic2Vzc2lvbl9oYW5kbGVyIjtzOjg6ImRhdGFiYXNlIjtzOjI4OiJzZXNzaW9uX21lbWNhY2hlX3NlcnZlcl9ob3N0IjtzOjk6ImxvY2FsaG9zdCI7czoyODoic2Vzc2lvbl9tZW1jYWNoZV9zZXJ2ZXJfcG9ydCI7aToxMTIxMTtzOjI5OiJzZXNzaW9uX21lbWNhY2hlZF9zZXJ2ZXJfaG9zdCI7czo5OiJsb2NhbGhvc3QiO3M6Mjk6InNlc3Npb25fbWVtY2FjaGVkX3NlcnZlcl9wb3J0IjtpOjExMjExO3M6MjE6InNlc3Npb25fcmVkaXNfcGVyc2lzdCI7aToxO3M6MjU6InNlc3Npb25fcmVkaXNfc2VydmVyX2hvc3QiO3M6OToibG9jYWxob3N0IjtzOjI1OiJzZXNzaW9uX3JlZGlzX3NlcnZlcl9wb3J0IjtpOjYzNzk7czoyNToic2Vzc2lvbl9yZWRpc19zZXJ2ZXJfYXV0aCI7czowOiIiO3M6MjM6InNlc3Npb25fcmVkaXNfc2VydmVyX2RiIjtpOjA7czo4OiJsaWZldGltZSI7aToxMjA7czoxNDoic2hhcmVkX3Nlc3Npb24iO2k6MDtzOjg6InNpdGVuYW1lIjtzOjEyOiLQptC10YDQutCy0LAiO3M6Nzoib2ZmbGluZSI7aTowO3M6MjM6ImRpc3BsYXlfb2ZmbGluZV9tZXNzYWdlIjtpOjE7czoxNToib2ZmbGluZV9tZXNzYWdlIjtzOjE0OToi0KHQsNC50YIg0LfQsNGA0LDQtyDQt9Cw0LrRgNC40YLQuNC5INC90LAg0YLQtdGF0L3RltGH0L3QtSDQvtCx0YHQu9GD0LPQvtCy0YPQstCw0L3QvdGPLjxiciAvPtCR0YPQtNGMINC70LDRgdC60LAsINC30LDQstGW0YLQsNC50YLQtSDQv9GW0LfQvdGW0YjQtS4iO3M6MTM6Im9mZmxpbmVfaW1hZ2UiO3M6MDoiIjtzOjEyOiJmcm9udGVkaXRpbmciO2k6MTtzOjY6ImVkaXRvciI7czo3OiJ0aW55bWNlIjtzOjc6ImNhcHRjaGEiO3M6MToiMCI7czo2OiJhY2Nlc3MiO2k6MTtzOjEwOiJsaXN0X2xpbWl0IjtpOjIwO3M6MTA6ImZlZWRfbGltaXQiO2k6MTA7czoxMDoiZmVlZF9lbWFpbCI7czo0OiJub25lIjtzOjg6ImxvZ19wYXRoIjtzOjQ6ImxvZ3MiO3M6NzoiaGVscHVybCI7czo4MDoiaHR0cHM6Ly9oZWxwLmpvb21sYS5vcmcvcHJveHk/a2V5cmVmPUhlbHB7bWFqb3J9e21pbm9yfTp7a2V5cmVmfSZsYW5nPXtsYW5nY29kZX0iO3M6MTM6ImNvb2tpZV9kb21haW4iO3M6MDoiIjtzOjExOiJjb29raWVfcGF0aCI7czowOiIiO3M6NzoiZmlsdGVycyI7YTo5OntpOjE7YTozOntzOjExOiJmaWx0ZXJfdHlwZSI7czoyOiJOSCI7czoxMToiZmlsdGVyX3RhZ3MiO3M6MDoiIjtzOjE3OiJmaWx0ZXJfYXR0cmlidXRlcyI7czowOiIiO31pOjk7YTozOntzOjExOiJmaWx0ZXJfdHlwZSI7czoyOiJCTCI7czoxMToiZmlsdGVyX3RhZ3MiO3M6MDoiIjtzOjE3OiJmaWx0ZXJfYXR0cmlidXRlcyI7czowOiIiO31pOjY7YTozOntzOjExOiJmaWx0ZXJfdHlwZSI7czoyOiJCTCI7czoxMToiZmlsdGVyX3RhZ3MiO3M6MDoiIjtzOjE3OiJmaWx0ZXJfYXR0cmlidXRlcyI7czowOiIiO31pOjc7YTozOntzOjExOiJmaWx0ZXJfdHlwZSI7czo0OiJOT05FIjtzOjExOiJmaWx0ZXJfdGFncyI7czowOiIiO3M6MTc6ImZpbHRlcl9hdHRyaWJ1dGVzIjtzOjA6IiI7fWk6MjthOjM6e3M6MTE6ImZpbHRlcl90eXBlIjtzOjI6Ik5IIjtzOjExOiJmaWx0ZXJfdGFncyI7czowOiIiO3M6MTc6ImZpbHRlcl9hdHRyaWJ1dGVzIjtzOjA6IiI7fWk6MzthOjM6e3M6MTE6ImZpbHRlcl90eXBlIjtzOjI6IkJMIjtzOjExOiJmaWx0ZXJfdGFncyI7czowOiIiO3M6MTc6ImZpbHRlcl9hdHRyaWJ1dGVzIjtzOjA6IiI7fWk6NDthOjM6e3M6MTE6ImZpbHRlcl90eXBlIjtzOjI6IkJMIjtzOjExOiJmaWx0ZXJfdGFncyI7czowOiIiO3M6MTc6ImZpbHRlcl9hdHRyaWJ1dGVzIjtzOjA6IiI7fWk6NTthOjM6e3M6MTE6ImZpbHRlcl90eXBlIjtzOjI6IkJMIjtzOjExOiJmaWx0ZXJfdGFncyI7czowOiIiO3M6MTc6ImZpbHRlcl9hdHRyaWJ1dGVzIjtzOjA6IiI7fWk6ODthOjM6e3M6MTE6ImZpbHRlcl90eXBlIjtzOjQ6Ik5PTkUiO3M6MTE6ImZpbHRlcl90YWdzIjtzOjA6IiI7czoxNzoiZmlsdGVyX2F0dHJpYnV0ZXMiO3M6MDoiIjt9fXM6ODoiYXNzZXRfaWQiO2k6MTt9fX19czoxMzoiY29tX2luc3RhbGxlciI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo3OiJtZXNzYWdlIjtzOjA6IiI7czoxNzoiZXh0ZW5zaW9uX21lc3NhZ2UiO3M6MDoiIjtzOjk6Imxhbmd1YWdlcyI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo2OiJmaWx0ZXIiO2E6MTp7czo2OiJzZWFyY2giO3M6MzoidWtyIjt9czo0OiJsaXN0IjthOjI6e3M6MTI6ImZ1bGxvcmRlcmluZyI7czo4OiJuYW1lIEFTQyI7czo1OiJsaW1pdCI7czoyOiIyMCI7fXM6MTA6ImxpbWl0c3RhcnQiO2k6MDt9fXM6MTM6ImNvbV90ZW1wbGF0ZXMiO086ODoic3RkQ2xhc3MiOjE6e3M6NDoiZWRpdCI7Tzo4OiJzdGRDbGFzcyI6MTp7czo1OiJzdHlsZSI7Tzo4OiJzdGRDbGFzcyI6Mjp7czoyOiJpZCI7YToxOntpOjA7aTo5O31zOjQ6ImRhdGEiO047fX19czo5OiJjb21fdXNlcnMiO086ODoic3RkQ2xhc3MiOjE6e3M6NDoiZWRpdCI7Tzo4OiJzdGRDbGFzcyI6MTp7czo0OiJ1c2VyIjtPOjg6InN0ZENsYXNzIjoyOntzOjI6ImlkIjthOjA6e31zOjQ6ImRhdGEiO047fX19fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fXM6NDoidXNlciI7TzoyMDoiSm9vbWxhXENNU1xVc2VyXFVzZXIiOjE6e3M6MjoiaWQiO3M6MzoiOTE1Ijt9czoxMToiYXBwbGljYXRpb24iO086ODoic3RkQ2xhc3MiOjE6e3M6NToicXVldWUiO2E6MDp7fX19fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fQ==\";',915,'admin');
+INSERT INTO `wmjg1_session` VALUES ('s4ll42c8einn44ajhgat0kpni7',1,0,'1514975250','joomla|s:6640:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo0OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aTo0OTtzOjU6InRpbWVyIjtPOjg6InN0ZENsYXNzIjozOntzOjU6InN0YXJ0IjtpOjE1MTQ5NzUwMzM7czo0OiJsYXN0IjtpOjE1MTQ5NzUyNDk7czozOiJub3ciO2k6MTUxNDk3NTI1MDt9czo1OiJ0b2tlbiI7czozMjoiTEVkbEVrakNGdUFidElKdTNhOHB1VDBXa2U4Q2dJQ1YiO31zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6Mzp7czoxMzoiY29tX2luc3RhbGxlciI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo3OiJtZXNzYWdlIjtzOjA6IiI7czoxNzoiZXh0ZW5zaW9uX21lc3NhZ2UiO3M6MDoiIjtzOjEyOiJyZWRpcmVjdF91cmwiO047fXM6MTA6ImNvbV9jb25maWciO086ODoic3RkQ2xhc3MiOjE6e3M6NjoiY29uZmlnIjtPOjg6InN0ZENsYXNzIjoxOntzOjY6Imdsb2JhbCI7Tzo4OiJzdGRDbGFzcyI6MTp7czo0OiJkYXRhIjthOjk2OntzOjEzOiJjYWNoZV9oYW5kbGVyIjtzOjQ6ImZpbGUiO3M6MTA6ImNhY2hlX3BhdGgiO3M6MDoiIjtzOjE2OiJtZW1jYWNoZV9wZXJzaXN0IjtpOjE7czoxNzoibWVtY2FjaGVfY29tcHJlc3MiO2k6MDtzOjIwOiJtZW1jYWNoZV9zZXJ2ZXJfaG9zdCI7czo5OiJsb2NhbGhvc3QiO3M6MjA6Im1lbWNhY2hlX3NlcnZlcl9wb3J0IjtpOjExMjExO3M6MTc6Im1lbWNhY2hlZF9wZXJzaXN0IjtpOjE7czoxODoibWVtY2FjaGVkX2NvbXByZXNzIjtpOjA7czoyMToibWVtY2FjaGVkX3NlcnZlcl9ob3N0IjtzOjk6ImxvY2FsaG9zdCI7czoyMToibWVtY2FjaGVkX3NlcnZlcl9wb3J0IjtpOjExMjExO3M6MTM6InJlZGlzX3BlcnNpc3QiO2k6MTtzOjE3OiJyZWRpc19zZXJ2ZXJfaG9zdCI7czo5OiJsb2NhbGhvc3QiO3M6MTc6InJlZGlzX3NlcnZlcl9wb3J0IjtpOjYzNzk7czoxNzoicmVkaXNfc2VydmVyX2F1dGgiO3M6MDoiIjtzOjE1OiJyZWRpc19zZXJ2ZXJfZGIiO2k6MDtzOjk6ImNhY2hldGltZSI7aToxNTtzOjIwOiJjYWNoZV9wbGF0Zm9ybXByZWZpeCI7aTowO3M6NzoiY2FjaGluZyI7aTowO3M6NjoiZGJ0eXBlIjtzOjY6Im15c3FsaSI7czo0OiJob3N0IjtzOjk6ImxvY2FsaG9zdCI7czo0OiJ1c2VyIjtzOjQ6InJvb3QiO3M6MjoiZGIiO3M6NToiZ3JhY2UiO3M6ODoiZGJwcmVmaXgiO3M6Njoid21qZzFfIjtzOjU6ImRlYnVnIjtpOjA7czoxMDoiZGVidWdfbGFuZyI7aTowO3M6MTA6ImZ0cF9lbmFibGUiO2k6MDtzOjg6ImZ0cF9ob3N0IjtzOjA6IiI7czo4OiJmdHBfcG9ydCI7czowOiIiO3M6ODoiZnRwX3VzZXIiO3M6MDoiIjtzOjg6ImZ0cF9wYXNzIjtzOjA6IiI7czo4OiJmdHBfcm9vdCI7czowOiIiO3M6MTI6InByb3h5X2VuYWJsZSI7aTowO3M6MTA6InByb3h5X2hvc3QiO3M6MDoiIjtzOjEwOiJwcm94eV9wb3J0IjtzOjA6IiI7czoxMDoicHJveHlfdXNlciI7czowOiIiO3M6MTA6InByb3h5X3Bhc3MiO3M6MDoiIjtzOjY6Im9mZnNldCI7czoxMToiRXVyb3BlL0tpZXYiO3M6MTA6Im1haWxvbmxpbmUiO2k6MTtzOjExOiJtYXNzbWFpbG9mZiI7aTowO3M6ODoibWFpbGZyb20iO3M6MTg6InZpZGl2YW5hQGdtYWlsLmNvbSI7czo4OiJmcm9tbmFtZSI7czoxMjoi0KbQtdGA0LrQstCwIjtzOjc6InJlcGx5dG8iO3M6MDoiIjtzOjExOiJyZXBseXRvbmFtZSI7czowOiIiO3M6NjoibWFpbGVyIjtzOjQ6Im1haWwiO3M6ODoic2VuZG1haWwiO3M6MTg6Ii91c3Ivc2Jpbi9zZW5kbWFpbCI7czo4OiJzbXRwaG9zdCI7czo5OiJsb2NhbGhvc3QiO3M6ODoic210cHBvcnQiO2k6MjU7czoxMDoic210cHNlY3VyZSI7czo0OiJub25lIjtzOjg6InNtdHBhdXRoIjtpOjA7czo4OiJzbXRwdXNlciI7czowOiIiO3M6ODoic210cHBhc3MiO3M6MDoiIjtzOjg6Ik1ldGFEZXNjIjtzOjA6IiI7czo4OiJNZXRhS2V5cyI7czowOiIiO3M6Njoicm9ib3RzIjtzOjA6IiI7czoxMDoiTWV0YVJpZ2h0cyI7czowOiIiO3M6MTA6Ik1ldGFBdXRob3IiO2k6MTtzOjExOiJNZXRhVmVyc2lvbiI7aTowO3M6Mzoic2VmIjtpOjE7czoxMToic2VmX3Jld3JpdGUiO2k6MDtzOjEwOiJzZWZfc3VmZml4IjtpOjA7czoxMjoidW5pY29kZXNsdWdzIjtpOjA7czoxOToic2l0ZW5hbWVfcGFnZXRpdGxlcyI7aTowO3M6ODoidG1wX3BhdGgiO3M6MjE6Ii9ob21lL2l2by93d3dsb2MyL3RtcCI7czo0OiJnemlwIjtpOjA7czoxNToiZXJyb3JfcmVwb3J0aW5nIjtzOjExOiJkZXZlbG9wbWVudCI7czo5OiJmb3JjZV9zc2wiO2k6MDtzOjE1OiJzZXNzaW9uX2hhbmRsZXIiO3M6ODoiZGF0YWJhc2UiO3M6Mjg6InNlc3Npb25fbWVtY2FjaGVfc2VydmVyX2hvc3QiO3M6OToibG9jYWxob3N0IjtzOjI4OiJzZXNzaW9uX21lbWNhY2hlX3NlcnZlcl9wb3J0IjtpOjExMjExO3M6Mjk6InNlc3Npb25fbWVtY2FjaGVkX3NlcnZlcl9ob3N0IjtzOjk6ImxvY2FsaG9zdCI7czoyOToic2Vzc2lvbl9tZW1jYWNoZWRfc2VydmVyX3BvcnQiO2k6MTEyMTE7czoyMToic2Vzc2lvbl9yZWRpc19wZXJzaXN0IjtpOjE7czoyNToic2Vzc2lvbl9yZWRpc19zZXJ2ZXJfaG9zdCI7czo5OiJsb2NhbGhvc3QiO3M6MjU6InNlc3Npb25fcmVkaXNfc2VydmVyX3BvcnQiO2k6NjM3OTtzOjI1OiJzZXNzaW9uX3JlZGlzX3NlcnZlcl9hdXRoIjtzOjA6IiI7czoyMzoic2Vzc2lvbl9yZWRpc19zZXJ2ZXJfZGIiO2k6MDtzOjg6ImxpZmV0aW1lIjtpOjEyMDtzOjE0OiJzaGFyZWRfc2Vzc2lvbiI7aTowO3M6ODoic2l0ZW5hbWUiO3M6MTI6ItCm0LXRgNC60LLQsCI7czo3OiJvZmZsaW5lIjtpOjA7czoyMzoiZGlzcGxheV9vZmZsaW5lX21lc3NhZ2UiO2k6MTtzOjE1OiJvZmZsaW5lX21lc3NhZ2UiO3M6MTQ5OiLQodCw0LnRgiDQt9Cw0YDQsNC3INC30LDQutGA0LjRgtC40Lkg0L3QsCDRgtC10YXQvdGW0YfQvdC1INC+0LHRgdC70YPQs9C+0LLRg9Cy0LDQvdC90Y8uPGJyIC8+0JHRg9C00Ywg0LvQsNGB0LrQsCwg0LfQsNCy0ZbRgtCw0LnRgtC1INC/0ZbQt9C90ZbRiNC1LiI7czoxMzoib2ZmbGluZV9pbWFnZSI7czowOiIiO3M6MTI6ImZyb250ZWRpdGluZyI7aToxO3M6NjoiZWRpdG9yIjtzOjc6InRpbnltY2UiO3M6NzoiY2FwdGNoYSI7czoxOiIwIjtzOjY6ImFjY2VzcyI7aToxO3M6MTA6Imxpc3RfbGltaXQiO2k6MjA7czoxMDoiZmVlZF9saW1pdCI7aToxMDtzOjEwOiJmZWVkX2VtYWlsIjtzOjQ6Im5vbmUiO3M6ODoibG9nX3BhdGgiO3M6MjE6Ii9ob21lL2l2by93d3dsb2MyL2xvZyI7czo3OiJoZWxwdXJsIjtzOjgwOiJodHRwczovL2hlbHAuam9vbWxhLm9yZy9wcm94eT9rZXlyZWY9SGVscHttYWpvcn17bWlub3J9OntrZXlyZWZ9Jmxhbmc9e2xhbmdjb2RlfSI7czoxMzoiY29va2llX2RvbWFpbiI7czowOiIiO3M6MTE6ImNvb2tpZV9wYXRoIjtzOjA6IiI7czo3OiJmaWx0ZXJzIjthOjk6e2k6MTthOjM6e3M6MTE6ImZpbHRlcl90eXBlIjtzOjI6Ik5IIjtzOjExOiJmaWx0ZXJfdGFncyI7czowOiIiO3M6MTc6ImZpbHRlcl9hdHRyaWJ1dGVzIjtzOjA6IiI7fWk6OTthOjM6e3M6MTE6ImZpbHRlcl90eXBlIjtzOjI6IkJMIjtzOjExOiJmaWx0ZXJfdGFncyI7czowOiIiO3M6MTc6ImZpbHRlcl9hdHRyaWJ1dGVzIjtzOjA6IiI7fWk6NjthOjM6e3M6MTE6ImZpbHRlcl90eXBlIjtzOjI6IkJMIjtzOjExOiJmaWx0ZXJfdGFncyI7czowOiIiO3M6MTc6ImZpbHRlcl9hdHRyaWJ1dGVzIjtzOjA6IiI7fWk6NzthOjM6e3M6MTE6ImZpbHRlcl90eXBlIjtzOjQ6Ik5PTkUiO3M6MTE6ImZpbHRlcl90YWdzIjtzOjA6IiI7czoxNzoiZmlsdGVyX2F0dHJpYnV0ZXMiO3M6MDoiIjt9aToyO2E6Mzp7czoxMToiZmlsdGVyX3R5cGUiO3M6MjoiTkgiO3M6MTE6ImZpbHRlcl90YWdzIjtzOjA6IiI7czoxNzoiZmlsdGVyX2F0dHJpYnV0ZXMiO3M6MDoiIjt9aTozO2E6Mzp7czoxMToiZmlsdGVyX3R5cGUiO3M6MjoiQkwiO3M6MTE6ImZpbHRlcl90YWdzIjtzOjA6IiI7czoxNzoiZmlsdGVyX2F0dHJpYnV0ZXMiO3M6MDoiIjt9aTo0O2E6Mzp7czoxMToiZmlsdGVyX3R5cGUiO3M6MjoiQkwiO3M6MTE6ImZpbHRlcl90YWdzIjtzOjA6IiI7czoxNzoiZmlsdGVyX2F0dHJpYnV0ZXMiO3M6MDoiIjt9aTo1O2E6Mzp7czoxMToiZmlsdGVyX3R5cGUiO3M6MjoiQkwiO3M6MTE6ImZpbHRlcl90YWdzIjtzOjA6IiI7czoxNzoiZmlsdGVyX2F0dHJpYnV0ZXMiO3M6MDoiIjt9aTo4O2E6Mzp7czoxMToiZmlsdGVyX3R5cGUiO3M6NDoiTk9ORSI7czoxMToiZmlsdGVyX3RhZ3MiO3M6MDoiIjtzOjE3OiJmaWx0ZXJfYXR0cmlidXRlcyI7czowOiIiO319czo4OiJhc3NldF9pZCI7aToxO319fX1zOjExOiJjb21fcGx1Z2lucyI7Tzo4OiJzdGRDbGFzcyI6MTp7czo3OiJwbHVnaW5zIjtPOjg6InN0ZENsYXNzIjozOntzOjY6ImZpbHRlciI7Tzo4OiJzdGRDbGFzcyI6MTp7czo2OiJmb2xkZXIiO3M6MTM6InNlcm1vbnNwZWFrZXIiO31zOjEwOiJsaW1pdHN0YXJ0IjtpOjA7czo0OiJsaXN0IjthOjY6e3M6OToiZGlyZWN0aW9uIjtzOjM6ImFzYyI7czo1OiJsaW1pdCI7czoyOiIyMCI7czo4OiJvcmRlcmluZyI7czo2OiJmb2xkZXIiO3M6NToic3RhcnQiO2Q6MDtzOjk6InNvcnRUYWJsZSI7czo2OiJmb2xkZXIiO3M6MTQ6ImRpcmVjdGlvblRhYmxlIjtzOjM6ImFzYyI7fX19fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fXM6NDoidXNlciI7TzoyMDoiSm9vbWxhXENNU1xVc2VyXFVzZXIiOjE6e3M6MjoiaWQiO3M6MzoiOTE1Ijt9czoxMToiYXBwbGljYXRpb24iO086ODoic3RkQ2xhc3MiOjE6e3M6NToicXVldWUiO2E6MDp7fX19fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fQ==\";',915,'admin');
 /*!40000 ALTER TABLE `wmjg1_session` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2497,7 +2725,7 @@ CREATE TABLE `wmjg1_update_sites` (
   `last_check_timestamp` bigint(20) DEFAULT '0',
   `extra_query` varchar(1000) COLLATE utf8mb4_unicode_ci DEFAULT '',
   PRIMARY KEY (`update_site_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Update Sites';
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Update Sites';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2506,12 +2734,26 @@ CREATE TABLE `wmjg1_update_sites` (
 
 LOCK TABLES `wmjg1_update_sites` WRITE;
 /*!40000 ALTER TABLE `wmjg1_update_sites` DISABLE KEYS */;
-INSERT INTO `wmjg1_update_sites` VALUES (1,'Joomla! Core','collection','https://update.joomla.org/core/list.xml',1,1514907392,'');
-INSERT INTO `wmjg1_update_sites` VALUES (2,'Accredited Joomla! Translations','collection','https://update.joomla.org/language/translationlist_3.xml',1,1514907393,'');
-INSERT INTO `wmjg1_update_sites` VALUES (3,'Joomla! Update Component Update Site','extension','https://update.joomla.org/core/extensions/com_joomlaupdate.xml',1,1514907393,'');
-INSERT INTO `wmjg1_update_sites` VALUES (4,'Accredited Joomla! Translations','collection','http://update.joomla.org/language/translationlist_3.xml',1,1514907394,'');
-INSERT INTO `wmjg1_update_sites` VALUES (5,'WebInstaller Update Site','extension','https://appscdn.joomla.org/webapps/jedapps/webinstaller.xml',1,1514907395,'');
-INSERT INTO `wmjg1_update_sites` VALUES (6,'','extension','http://update.joomlart.com/service/tracking/j31/ja_simpli.xml',1,1514907395,'');
+INSERT INTO `wmjg1_update_sites` VALUES (1,'Joomla! Core','collection','https://update.joomla.org/core/list.xml',1,1514975120,'');
+INSERT INTO `wmjg1_update_sites` VALUES (2,'Accredited Joomla! Translations','collection','https://update.joomla.org/language/translationlist_3.xml',1,1514975120,'');
+INSERT INTO `wmjg1_update_sites` VALUES (3,'Joomla! Update Component Update Site','extension','https://update.joomla.org/core/extensions/com_joomlaupdate.xml',1,1514975120,'');
+INSERT INTO `wmjg1_update_sites` VALUES (4,'Accredited Joomla! Translations','collection','http://update.joomla.org/language/translationlist_3.xml',1,1514975121,'');
+INSERT INTO `wmjg1_update_sites` VALUES (5,'WebInstaller Update Site','extension','https://appscdn.joomla.org/webapps/jedapps/webinstaller.xml',1,1514975122,'');
+INSERT INTO `wmjg1_update_sites` VALUES (6,'','extension','http://update.joomlart.com/service/tracking/j31/ja_simpli.xml',1,1514975123,'');
+INSERT INTO `wmjg1_update_sites` VALUES (7,'SermonSpeaker.net','extension','http://www.sermonspeaker.net/update/com_sermonspeaker.xml',1,0,'');
+INSERT INTO `wmjg1_update_sites` VALUES (8,'SermonSpeaker.net','extension','http://www.sermonspeaker.net/update/mod_latestsermons.xml',1,0,'');
+INSERT INTO `wmjg1_update_sites` VALUES (9,'SermonSpeaker.net','extension','http://www.sermonspeaker.net/update/mod_sermoncast.xml',1,0,'');
+INSERT INTO `wmjg1_update_sites` VALUES (10,'SermonSpeaker.net','extension','http://www.sermonspeaker.net/update/mod_sermonspeaker.xml',1,0,'');
+INSERT INTO `wmjg1_update_sites` VALUES (11,'SermonSpeaker.net','extension','http://www.sermonspeaker.net/update/mod_sermonspeaker_admin.xml',1,0,'');
+INSERT INTO `wmjg1_update_sites` VALUES (12,'SermonSpeaker.net','extension','http://www.sermonspeaker.net/update/mod_sermonupload.xml',1,0,'');
+INSERT INTO `wmjg1_update_sites` VALUES (13,'SermonSpeaker.net','extension','http://www.sermonspeaker.net/update/plg_content_sermonspeaker.xml',1,0,'');
+INSERT INTO `wmjg1_update_sites` VALUES (14,'SermonSpeaker.net','extension','http://www.sermonspeaker.net/update/plg_editors_xtd_sermonspeaker.xml',1,0,'');
+INSERT INTO `wmjg1_update_sites` VALUES (15,'SermonSpeaker.net','extension','http://www.sermonspeaker.net/update/plg_sermonspeaker_finder.xml',1,0,'');
+INSERT INTO `wmjg1_update_sites` VALUES (16,'SermonSpeaker.net','extension','http://www.sermonspeaker.net/update/plg_sermonspeaker_search.xml',1,0,'');
+INSERT INTO `wmjg1_update_sites` VALUES (17,'SermonSpeaker.net','extension','http://www.sermonspeaker.net/update/plg_sermonspeaker_jwplayer7.xml',1,0,'');
+INSERT INTO `wmjg1_update_sites` VALUES (18,'SermonSpeaker.net','extension','http://www.sermonspeaker.net/update/plg_sermonspeaker_pixelout.xml',1,0,'');
+INSERT INTO `wmjg1_update_sites` VALUES (19,'SermonSpeaker.net','extension','http://www.sermonspeaker.net/update/mod_related_sermons.xml',1,0,'');
+INSERT INTO `wmjg1_update_sites` VALUES (20,'SermonSpeaker.net','extension','http://www.sermonspeaker.net/update/mod_sermonarchive.xml',1,0,'');
 /*!40000 ALTER TABLE `wmjg1_update_sites` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2541,6 +2783,21 @@ INSERT INTO `wmjg1_update_sites_extensions` VALUES (3,28);
 INSERT INTO `wmjg1_update_sites_extensions` VALUES (4,10002);
 INSERT INTO `wmjg1_update_sites_extensions` VALUES (5,10005);
 INSERT INTO `wmjg1_update_sites_extensions` VALUES (6,10004);
+INSERT INTO `wmjg1_update_sites_extensions` VALUES (7,10007);
+INSERT INTO `wmjg1_update_sites_extensions` VALUES (8,10008);
+INSERT INTO `wmjg1_update_sites_extensions` VALUES (9,10009);
+INSERT INTO `wmjg1_update_sites_extensions` VALUES (10,10010);
+INSERT INTO `wmjg1_update_sites_extensions` VALUES (11,10011);
+INSERT INTO `wmjg1_update_sites_extensions` VALUES (12,10012);
+INSERT INTO `wmjg1_update_sites_extensions` VALUES (12,10016);
+INSERT INTO `wmjg1_update_sites_extensions` VALUES (13,10013);
+INSERT INTO `wmjg1_update_sites_extensions` VALUES (14,10014);
+INSERT INTO `wmjg1_update_sites_extensions` VALUES (15,10015);
+INSERT INTO `wmjg1_update_sites_extensions` VALUES (16,10017);
+INSERT INTO `wmjg1_update_sites_extensions` VALUES (17,10018);
+INSERT INTO `wmjg1_update_sites_extensions` VALUES (18,10019);
+INSERT INTO `wmjg1_update_sites_extensions` VALUES (19,10020);
+INSERT INTO `wmjg1_update_sites_extensions` VALUES (20,10021);
 /*!40000 ALTER TABLE `wmjg1_update_sites_extensions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2576,80 +2833,80 @@ CREATE TABLE `wmjg1_updates` (
 
 LOCK TABLES `wmjg1_updates` WRITE;
 /*!40000 ALTER TABLE `wmjg1_updates` DISABLE KEYS */;
-INSERT INTO `wmjg1_updates` VALUES (1,2,0,'Macedonian','','pkg_mk-MK','package','',0,'3.6.5.1','','https://update.joomla.org/language/details3/mk-MK_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (2,2,0,'Norwegian Bokmal','','pkg_nb-NO','package','',0,'3.7.4.1','','https://update.joomla.org/language/details3/nb-NO_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (3,2,0,'Norwegian Nynorsk','','pkg_nn-NO','package','',0,'3.4.2.1','','https://update.joomla.org/language/details3/nn-NO_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (4,2,0,'Persian','','pkg_fa-IR','package','',0,'3.8.3.2','','https://update.joomla.org/language/details3/fa-IR_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (5,2,0,'Polish','','pkg_pl-PL','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/pl-PL_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (6,2,0,'Portuguese','','pkg_pt-PT','package','',0,'3.8.2.1','','https://update.joomla.org/language/details3/pt-PT_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (7,2,0,'Russian','','pkg_ru-RU','package','',0,'3.8.2.1','','https://update.joomla.org/language/details3/ru-RU_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (8,2,0,'English AU','','pkg_en-AU','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/en-AU_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (9,2,0,'Slovak','','pkg_sk-SK','package','',0,'3.8.1.1','','https://update.joomla.org/language/details3/sk-SK_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (10,2,0,'English US','','pkg_en-US','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/en-US_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (11,2,0,'Swedish','','pkg_sv-SE','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/sv-SE_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (12,2,0,'Syriac','','pkg_sy-IQ','package','',0,'3.4.5.1','','https://update.joomla.org/language/details3/sy-IQ_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (13,2,0,'Tamil','','pkg_ta-IN','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/ta-IN_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (14,2,0,'Thai','','pkg_th-TH','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/th-TH_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (15,2,0,'Turkish','','pkg_tr-TR','package','',0,'3.8.2.1','','https://update.joomla.org/language/details3/tr-TR_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (16,2,0,'Uyghur','','pkg_ug-CN','package','',0,'3.7.5.1','','https://update.joomla.org/language/details3/ug-CN_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (17,2,0,'Albanian','','pkg_sq-AL','package','',0,'3.1.1.2','','https://update.joomla.org/language/details3/sq-AL_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (18,2,0,'Basque','','pkg_eu-ES','package','',0,'3.7.5.1','','https://update.joomla.org/language/details3/eu-ES_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (19,2,0,'Hindi','','pkg_hi-IN','package','',0,'3.3.6.2','','https://update.joomla.org/language/details3/hi-IN_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (20,2,0,'German DE','','pkg_de-DE','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/de-DE_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (21,2,0,'Portuguese Brazil','','pkg_pt-BR','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/pt-BR_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (22,2,0,'Serbian Latin','','pkg_sr-YU','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/sr-YU_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (23,2,0,'Spanish','','pkg_es-ES','package','',0,'3.7.2.1','','https://update.joomla.org/language/details3/es-ES_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (24,2,0,'Bosnian','','pkg_bs-BA','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/bs-BA_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (25,2,0,'Serbian Cyrillic','','pkg_sr-RS','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/sr-RS_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (26,2,0,'Vietnamese','','pkg_vi-VN','package','',0,'3.2.1.2','','https://update.joomla.org/language/details3/vi-VN_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (27,2,0,'Bahasa Indonesia','','pkg_id-ID','package','',0,'3.6.2.1','','https://update.joomla.org/language/details3/id-ID_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (28,2,0,'Finnish','','pkg_fi-FI','package','',0,'3.8.1.1','','https://update.joomla.org/language/details3/fi-FI_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (29,2,0,'Swahili','','pkg_sw-KE','package','',0,'3.6.5.1','','https://update.joomla.org/language/details3/sw-KE_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (30,2,0,'Montenegrin','','pkg_srp-ME','package','',0,'3.3.1.2','','https://update.joomla.org/language/details3/srp-ME_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (31,2,0,'English CA','','pkg_en-CA','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/en-CA_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (32,2,0,'French CA','','pkg_fr-CA','package','',0,'3.6.5.1','','https://update.joomla.org/language/details3/fr-CA_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (33,2,0,'Welsh','','pkg_cy-GB','package','',0,'3.8.2.1','','https://update.joomla.org/language/details3/cy-GB_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (34,2,0,'Sinhala','','pkg_si-LK','package','',0,'3.3.1.2','','https://update.joomla.org/language/details3/si-LK_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (35,2,0,'Dari Persian','','pkg_prs-AF','package','',0,'3.4.4.2','','https://update.joomla.org/language/details3/prs-AF_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (36,2,0,'Turkmen','','pkg_tk-TM','package','',0,'3.5.0.2','','https://update.joomla.org/language/details3/tk-TM_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (37,2,0,'Irish','','pkg_ga-IE','package','',0,'3.8.2.1','','https://update.joomla.org/language/details3/ga-IE_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (38,2,0,'Dzongkha','','pkg_dz-BT','package','',0,'3.6.2.1','','https://update.joomla.org/language/details3/dz-BT_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (39,2,0,'Slovenian','','pkg_sl-SI','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/sl-SI_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (40,2,0,'Spanish CO','','pkg_es-CO','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/es-CO_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (41,2,0,'German CH','','pkg_de-CH','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/de-CH_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (42,2,0,'German AT','','pkg_de-AT','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/de-AT_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (43,2,0,'German LI','','pkg_de-LI','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/de-LI_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (44,2,0,'German LU','','pkg_de-LU','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/de-LU_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (45,2,0,'English NZ','','pkg_en-NZ','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/en-NZ_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (46,4,0,'Armenian','','pkg_hy-AM','package','',0,'3.4.4.1','','https://update.joomla.org/language/details3/hy-AM_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (47,4,0,'Malay','','pkg_ms-MY','package','',0,'3.4.1.2','','https://update.joomla.org/language/details3/ms-MY_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (48,4,0,'Romanian','','pkg_ro-RO','package','',0,'3.7.3.1','','https://update.joomla.org/language/details3/ro-RO_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (49,4,0,'Flemish','','pkg_nl-BE','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/nl-BE_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (50,4,0,'Chinese Traditional','','pkg_zh-TW','package','',0,'3.8.0.1','','https://update.joomla.org/language/details3/zh-TW_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (51,4,0,'French','','pkg_fr-FR','package','',0,'3.8.3.2','','https://update.joomla.org/language/details3/fr-FR_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (52,4,0,'Galician','','pkg_gl-ES','package','',0,'3.3.1.2','','https://update.joomla.org/language/details3/gl-ES_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (53,4,0,'Georgian','','pkg_ka-GE','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/ka-GE_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (54,4,0,'Greek','','pkg_el-GR','package','',0,'3.8.3.4','','https://update.joomla.org/language/details3/el-GR_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (55,4,0,'Japanese','','pkg_ja-JP','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/ja-JP_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (56,4,0,'Hebrew','','pkg_he-IL','package','',0,'3.1.1.1','','https://update.joomla.org/language/details3/he-IL_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (57,4,0,'Bengali','','pkg_bn-BD','package','',0,'3.8.2.1','','https://update.joomla.org/language/details3/bn-BD_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (58,4,0,'Hungarian','','pkg_hu-HU','package','',0,'3.8.2.1','','https://update.joomla.org/language/details3/hu-HU_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (59,4,0,'Afrikaans','','pkg_af-ZA','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/af-ZA_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (60,4,0,'Arabic Unitag','','pkg_ar-AA','package','',0,'3.7.5.1','','https://update.joomla.org/language/details3/ar-AA_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (61,4,0,'Belarusian','','pkg_be-BY','package','',0,'3.2.1.2','','https://update.joomla.org/language/details3/be-BY_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (62,4,0,'Bulgarian','','pkg_bg-BG','package','',0,'3.6.5.2','','https://update.joomla.org/language/details3/bg-BG_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (63,4,0,'Catalan','','pkg_ca-ES','package','',0,'3.8.3.3','','https://update.joomla.org/language/details3/ca-ES_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (64,4,0,'Chinese Simplified','','pkg_zh-CN','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/zh-CN_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (65,4,0,'Croatian','','pkg_hr-HR','package','',0,'3.7.5.1','','https://update.joomla.org/language/details3/hr-HR_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (66,4,0,'Czech','','pkg_cs-CZ','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/cs-CZ_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (67,4,0,'Danish','','pkg_da-DK','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/da-DK_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (68,4,0,'Dutch','','pkg_nl-NL','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/nl-NL_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (69,4,0,'Esperanto','','pkg_eo-XX','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/eo-XX_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (70,4,0,'Estonian','','pkg_et-EE','package','',0,'3.7.0.1','','https://update.joomla.org/language/details3/et-EE_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (71,4,0,'Italian','','pkg_it-IT','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/it-IT_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (72,4,0,'Khmer','','pkg_km-KH','package','',0,'3.4.5.1','','https://update.joomla.org/language/details3/km-KH_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (73,4,0,'Korean','','pkg_ko-KR','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/ko-KR_details.xml','','');
-INSERT INTO `wmjg1_updates` VALUES (74,4,0,'Latvian','','pkg_lv-LV','package','',0,'3.7.3.1','','https://update.joomla.org/language/details3/lv-LV_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (1,2,0,'Croatian','','pkg_hr-HR','package','',0,'3.7.5.1','','https://update.joomla.org/language/details3/hr-HR_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (2,2,0,'Czech','','pkg_cs-CZ','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/cs-CZ_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (3,2,0,'Danish','','pkg_da-DK','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/da-DK_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (4,2,0,'Dutch','','pkg_nl-NL','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/nl-NL_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (5,2,0,'Esperanto','','pkg_eo-XX','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/eo-XX_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (6,2,0,'Estonian','','pkg_et-EE','package','',0,'3.7.0.1','','https://update.joomla.org/language/details3/et-EE_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (7,2,0,'Italian','','pkg_it-IT','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/it-IT_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (8,2,0,'Khmer','','pkg_km-KH','package','',0,'3.4.5.1','','https://update.joomla.org/language/details3/km-KH_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (9,2,0,'Korean','','pkg_ko-KR','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/ko-KR_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (10,2,0,'Latvian','','pkg_lv-LV','package','',0,'3.7.3.1','','https://update.joomla.org/language/details3/lv-LV_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (11,2,0,'Macedonian','','pkg_mk-MK','package','',0,'3.6.5.1','','https://update.joomla.org/language/details3/mk-MK_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (12,2,0,'Norwegian Bokmal','','pkg_nb-NO','package','',0,'3.7.4.1','','https://update.joomla.org/language/details3/nb-NO_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (13,2,0,'Norwegian Nynorsk','','pkg_nn-NO','package','',0,'3.4.2.1','','https://update.joomla.org/language/details3/nn-NO_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (14,2,0,'Persian','','pkg_fa-IR','package','',0,'3.8.3.2','','https://update.joomla.org/language/details3/fa-IR_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (15,2,0,'Polish','','pkg_pl-PL','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/pl-PL_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (16,2,0,'Portuguese','','pkg_pt-PT','package','',0,'3.8.2.1','','https://update.joomla.org/language/details3/pt-PT_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (17,2,0,'Russian','','pkg_ru-RU','package','',0,'3.8.2.1','','https://update.joomla.org/language/details3/ru-RU_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (18,2,0,'English AU','','pkg_en-AU','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/en-AU_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (19,2,0,'Slovak','','pkg_sk-SK','package','',0,'3.8.1.1','','https://update.joomla.org/language/details3/sk-SK_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (20,2,0,'English US','','pkg_en-US','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/en-US_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (21,2,0,'Swedish','','pkg_sv-SE','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/sv-SE_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (22,2,0,'Syriac','','pkg_sy-IQ','package','',0,'3.4.5.1','','https://update.joomla.org/language/details3/sy-IQ_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (23,2,0,'Tamil','','pkg_ta-IN','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/ta-IN_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (24,2,0,'Thai','','pkg_th-TH','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/th-TH_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (25,2,0,'Turkish','','pkg_tr-TR','package','',0,'3.8.2.1','','https://update.joomla.org/language/details3/tr-TR_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (26,2,0,'Uyghur','','pkg_ug-CN','package','',0,'3.7.5.1','','https://update.joomla.org/language/details3/ug-CN_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (27,2,0,'Albanian','','pkg_sq-AL','package','',0,'3.1.1.2','','https://update.joomla.org/language/details3/sq-AL_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (28,2,0,'Basque','','pkg_eu-ES','package','',0,'3.7.5.1','','https://update.joomla.org/language/details3/eu-ES_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (29,2,0,'Hindi','','pkg_hi-IN','package','',0,'3.3.6.2','','https://update.joomla.org/language/details3/hi-IN_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (30,2,0,'German DE','','pkg_de-DE','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/de-DE_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (31,2,0,'Portuguese Brazil','','pkg_pt-BR','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/pt-BR_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (32,2,0,'Serbian Latin','','pkg_sr-YU','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/sr-YU_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (33,2,0,'Spanish','','pkg_es-ES','package','',0,'3.7.2.1','','https://update.joomla.org/language/details3/es-ES_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (34,2,0,'Bosnian','','pkg_bs-BA','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/bs-BA_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (35,2,0,'Serbian Cyrillic','','pkg_sr-RS','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/sr-RS_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (36,2,0,'Vietnamese','','pkg_vi-VN','package','',0,'3.2.1.2','','https://update.joomla.org/language/details3/vi-VN_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (37,2,0,'Bahasa Indonesia','','pkg_id-ID','package','',0,'3.6.2.1','','https://update.joomla.org/language/details3/id-ID_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (38,2,0,'Finnish','','pkg_fi-FI','package','',0,'3.8.1.1','','https://update.joomla.org/language/details3/fi-FI_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (39,2,0,'Swahili','','pkg_sw-KE','package','',0,'3.6.5.1','','https://update.joomla.org/language/details3/sw-KE_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (40,2,0,'Montenegrin','','pkg_srp-ME','package','',0,'3.3.1.2','','https://update.joomla.org/language/details3/srp-ME_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (41,2,0,'English CA','','pkg_en-CA','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/en-CA_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (42,2,0,'French CA','','pkg_fr-CA','package','',0,'3.6.5.1','','https://update.joomla.org/language/details3/fr-CA_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (43,2,0,'Welsh','','pkg_cy-GB','package','',0,'3.8.2.1','','https://update.joomla.org/language/details3/cy-GB_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (44,2,0,'Sinhala','','pkg_si-LK','package','',0,'3.3.1.2','','https://update.joomla.org/language/details3/si-LK_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (45,2,0,'Dari Persian','','pkg_prs-AF','package','',0,'3.4.4.2','','https://update.joomla.org/language/details3/prs-AF_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (46,2,0,'Turkmen','','pkg_tk-TM','package','',0,'3.5.0.2','','https://update.joomla.org/language/details3/tk-TM_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (47,2,0,'Irish','','pkg_ga-IE','package','',0,'3.8.2.1','','https://update.joomla.org/language/details3/ga-IE_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (48,2,0,'Dzongkha','','pkg_dz-BT','package','',0,'3.6.2.1','','https://update.joomla.org/language/details3/dz-BT_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (49,2,0,'Slovenian','','pkg_sl-SI','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/sl-SI_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (50,2,0,'Spanish CO','','pkg_es-CO','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/es-CO_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (51,2,0,'German CH','','pkg_de-CH','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/de-CH_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (52,2,0,'German AT','','pkg_de-AT','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/de-AT_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (53,2,0,'German LI','','pkg_de-LI','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/de-LI_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (54,2,0,'German LU','','pkg_de-LU','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/de-LU_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (55,2,0,'English NZ','','pkg_en-NZ','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/en-NZ_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (56,4,0,'Armenian','','pkg_hy-AM','package','',0,'3.4.4.1','','https://update.joomla.org/language/details3/hy-AM_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (57,4,0,'Malay','','pkg_ms-MY','package','',0,'3.4.1.2','','https://update.joomla.org/language/details3/ms-MY_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (58,4,0,'Romanian','','pkg_ro-RO','package','',0,'3.7.3.1','','https://update.joomla.org/language/details3/ro-RO_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (59,4,0,'Flemish','','pkg_nl-BE','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/nl-BE_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (60,4,0,'Chinese Traditional','','pkg_zh-TW','package','',0,'3.8.0.1','','https://update.joomla.org/language/details3/zh-TW_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (61,4,0,'French','','pkg_fr-FR','package','',0,'3.8.3.2','','https://update.joomla.org/language/details3/fr-FR_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (62,4,0,'Galician','','pkg_gl-ES','package','',0,'3.3.1.2','','https://update.joomla.org/language/details3/gl-ES_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (63,4,0,'Georgian','','pkg_ka-GE','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/ka-GE_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (64,4,0,'Greek','','pkg_el-GR','package','',0,'3.8.3.4','','https://update.joomla.org/language/details3/el-GR_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (65,4,0,'Japanese','','pkg_ja-JP','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/ja-JP_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (66,4,0,'Hebrew','','pkg_he-IL','package','',0,'3.1.1.1','','https://update.joomla.org/language/details3/he-IL_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (67,4,0,'Bengali','','pkg_bn-BD','package','',0,'3.8.2.1','','https://update.joomla.org/language/details3/bn-BD_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (68,4,0,'Hungarian','','pkg_hu-HU','package','',0,'3.8.2.1','','https://update.joomla.org/language/details3/hu-HU_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (69,4,0,'Afrikaans','','pkg_af-ZA','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/af-ZA_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (70,4,0,'Arabic Unitag','','pkg_ar-AA','package','',0,'3.7.5.1','','https://update.joomla.org/language/details3/ar-AA_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (71,4,0,'Belarusian','','pkg_be-BY','package','',0,'3.2.1.2','','https://update.joomla.org/language/details3/be-BY_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (72,4,0,'Bulgarian','','pkg_bg-BG','package','',0,'3.6.5.2','','https://update.joomla.org/language/details3/bg-BG_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (73,4,0,'Catalan','','pkg_ca-ES','package','',0,'3.8.3.3','','https://update.joomla.org/language/details3/ca-ES_details.xml','','');
+INSERT INTO `wmjg1_updates` VALUES (74,4,0,'Chinese Simplified','','pkg_zh-CN','package','',0,'3.8.3.1','','https://update.joomla.org/language/details3/zh-CN_details.xml','','');
 /*!40000 ALTER TABLE `wmjg1_updates` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2849,7 +3106,7 @@ CREATE TABLE `wmjg1_users` (
 
 LOCK TABLES `wmjg1_users` WRITE;
 /*!40000 ALTER TABLE `wmjg1_users` DISABLE KEYS */;
-INSERT INTO `wmjg1_users` VALUES (915,'Super User','admin','vidivana@gmail.com','$2y$10$4rUz49DKQEDifpb13KPk0eX12PYTaY4zV7fWVVvVvU6t1ephz/nd6',0,1,'2018-01-02 12:42:47','2018-01-02 15:16:02','0','{\"admin_style\":\"\",\"admin_language\":\"uk-UA\",\"language\":\"uk-UA\",\"editor\":\"\",\"helpsite\":\"\",\"timezone\":\"\"}','0000-00-00 00:00:00',0,'','',0);
+INSERT INTO `wmjg1_users` VALUES (915,'Super User','admin','vidivana@gmail.com','$2y$10$4rUz49DKQEDifpb13KPk0eX12PYTaY4zV7fWVVvVvU6t1ephz/nd6',0,1,'2018-01-02 12:42:47','2018-01-03 10:24:01','0','{\"admin_style\":\"\",\"admin_language\":\"uk-UA\",\"language\":\"uk-UA\",\"editor\":\"\",\"helpsite\":\"\",\"timezone\":\"\"}','0000-00-00 00:00:00',0,'','',0);
 /*!40000 ALTER TABLE `wmjg1_users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2915,4 +3172,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-01-02 17:39:30
+-- Dump completed on 2018-01-03 12:37:47
