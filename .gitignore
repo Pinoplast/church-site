@@ -4,7 +4,7 @@
 /logs
 /administrator/cache
 /tmp/*
-/configuration.php
+
 
 # Temp files
 *.tmp
