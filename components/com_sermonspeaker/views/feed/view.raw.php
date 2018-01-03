@@ -224,9 +224,9 @@ class SermonspeakerViewFeed extends JViewLegacy
 				$enclosure['url'] = JUri::root() . $path;
 
 				// Filesize for length TODO: Get from database if available
-				if (file_exists(JPATH_ROOT . $file))
+				if (file_exists(JPATH_ROOT . DIRECTORY_SEPARATOR . $file))
 				{
-					$enclosure['length'] = filesize(JPATH_ROOT . $file);
+					$enclosure['length'] = filesize(JPATH_ROOT . DIRECTORY_SEPARATOR . $file);
 				}
 				else
 				{

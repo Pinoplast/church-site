@@ -72,6 +72,9 @@ $assoc = JLanguageAssociations::isEnabled();
 						<th width="1%" style="min-width:40px" class="nowrap center">
 							<?php echo JHtml::_('searchtools.sort', 'JSTATUS', 'sermons.state', $listDirn, $listOrder); ?>
 						</th>
+						<th width="1%" style="min-width:40px" class="nowrap center">
+							D
+						</th>
 						<th>
 							<?php echo JHtml::_('searchtools.sort', 'JGLOBAL_TITLE', 'sermons.title', $listDirn, $listOrder); ?>
 						</th>
@@ -151,6 +154,11 @@ $assoc = JLanguageAssociations::isEnabled();
 								?>
 							</div>
 						</td>
+							<td class="center">
+							<a id="sermon_download" href="<?php echo JRoute::_('index.php?option=com_sermonspeaker&task=download&id=' . (int) $item->id . '&type=audio&mp3'); ?>" class="download">
+							D
+							</a>
+						</td>	
 						<td class="nowrap has-context">
 							<div class="pull-left">
 								<?php if ($item->checked_out) : ?>

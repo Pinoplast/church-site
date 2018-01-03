@@ -119,11 +119,12 @@ class SermonspeakerViewSermon extends JViewLegacy
 		}
 
 		// Update Statistic
-		if ($params->get('track_sermon') && !$this->user->authorise('com_sermonspeaker.hit', 'com_sermonspeaker'))
-		{
-			$model = $this->getModel();
-			$model->hit();
-		}
+//		if ($params->get('track_sermon') && !$this->user->authorise('com_sermonspeaker.hit', 'com_sermonspeaker'))
+//		{
+//			$model = $this->getModel();
+//			$model->hit();
+//		}
+	// onivan
 
 		// Process the content plugins.
 		$dispatcher = JEventDispatcher::getInstance();

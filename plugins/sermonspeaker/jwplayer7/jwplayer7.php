@@ -75,6 +75,7 @@ class PlgSermonspeakerJwplayer7 extends SermonspeakerPluginPlayer
 	{
 		$this->player = $player;
 
+		echo "<!-- jw7  -->";
 		// There is already a player loaded
 		if ($this->player->mspace)
 		{
@@ -195,6 +196,88 @@ class PlgSermonspeakerJwplayer7 extends SermonspeakerPluginPlayer
 
 			$doc->addScriptDeclaration("function ss_play(id){jwplayer('mediaspace" . $count . "').playlistItem(id);}");
 
+			// onivan
+				$eventTrigger = 
+			'
+			jQuery(document).ready(function(){
+			
+			   jwplayer().onPlay(function(event){
+			    	console.log("Play fired");
+			    	
+			    	var id = jwplayer().getPlaylistItem(jwplayer().getPlaylistIndex()).id;
+			    	console.log("id="); console.log(id);
+			    	console.log("position = " +  jwplayer().getPosition());
+			    	
+			    	if (jwplayer().getPosition() < 1) {
+						jQuery.ajax({
+							
+						  type: "GET",
+						  url: "/index.php",
+						  data: "option=com_sermonspeaker&task=started&format=json&id="+ id,
+						  success: function(){ //(msg)
+							console.log( " +1 Ok " );
+							//console.log( msg );
+							
+							var count = +(jQuery("#ss-started" + id).text());
+							if (isNaN(count)) count = 0;
+							console.log( "count = "  + count);
+							count++;
+							jQuery("#ss-started" + id).text(count);
+							
+						  }
+						});
+			    	}
+			    	
+				});
+			   
+			   function updatestats(){
+					var id = jwplayer().getPlaylistItem(jwplayer().getPlaylistIndex()).id;
+						console.log(id);
+						jQuery.ajax({
+						  type: "GET",
+						  url: "/index.php",
+						  data: "option=com_sermonspeaker&task=complited&format=json&id="+ id,
+						  success: function(){ //(msg)
+							//console.log( msg );
+							console.log( " +1 Ok " );
+							
+							var count = +(jQuery("#ss-complited" + id).text());
+							if (isNaN(count)) count = 0;
+							console.log( "count = "  + count);
+							count++;
+							jQuery("#ss-complited" + id).text(count);
+							
+						  }
+						});
+			   }
+			   
+			   jwplayer().onComplete(function(event){
+			    	console.log("onComplete fired");
+			    	//updatestats();
+			    	
+			    	
+				}); 
+				
+				
+				jwplayer().onBeforeComplete(function(event){
+					console.log("onBeforeComplete fired");
+					jwplayer().stop();
+					updatestats();
+			    	
+				}); 
+				
+				jwplayer().onPause(function(event){
+			    	//console.log("Pause fired");
+				}); 
+				
+				jwplayer().onBuffer(function(event){
+			    	//console.log("onBuffer fired");
+				}); 
+				
+			});
+			';
+			$doc->addScriptDeclaration($eventTrigger);
+			// onivan
 			if ($this->player->toggle)
 			{
 				if (!is_array($items))
@@ -351,6 +434,7 @@ class PlgSermonspeakerJwplayer7 extends SermonspeakerPluginPlayer
 	 */
 	private function createMultiPlaylist($items)
 	{
+//	print_r ($items);
 		$this->setDimensions('33', '100%');
 
 		// Make sure to not use < or && in JavaScript code as it will break XHTML compatibility
@@ -454,6 +538,7 @@ class PlgSermonspeakerJwplayer7 extends SermonspeakerPluginPlayer
 			{
 				$entry['image'] = $img;
 			}
+			$entry['id'] = $item->id;
 
 			foreach ($entry as $key => $value)
 			{
@@ -535,6 +620,7 @@ class PlgSermonspeakerJwplayer7 extends SermonspeakerPluginPlayer
 			$seconds           = ($time_arr[0] * 3600) + ($time_arr[1] * 60) + $time_arr[2];
 			$entry['duration'] = $seconds;
 		}
+		$entry['id'] = $item->id;
 
 		foreach ($entry as $key => $value)
 		{

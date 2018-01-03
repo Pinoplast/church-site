@@ -202,7 +202,7 @@ class SermonspeakerHelperPlayerJwplayer6 extends SermonspeakerHelperPlayer
 
 				if ($file)
 				{
-					$entry['file'] = SermonspeakerHelperSermonspeaker::makeLink($file);
+					$entry['file'] = SermonspeakerHelperSermonspeaker::makeLink(addslashes($file));
 				}
 				else
 				{
@@ -236,6 +236,8 @@ class SermonspeakerHelperPlayerJwplayer6 extends SermonspeakerHelperPlayer
 				{
 					$entry['image'] = $img;
 				}
+				// onivan
+				$entry['id'] = $temp_item->id;
 
 				foreach ($entry as $key => $value)
 				{
@@ -316,6 +318,8 @@ class SermonspeakerHelperPlayerJwplayer6 extends SermonspeakerHelperPlayer
 				$entry['duration'] = $seconds;
 			}
 
+			//onivan
+			$entry['id'] = $item->id;
 			foreach ($entry as $key => $value)
 			{
 				$entry[$key] = $key . ":'" . $value . "'";
@@ -327,7 +331,7 @@ class SermonspeakerHelperPlayerJwplayer6 extends SermonspeakerHelperPlayer
 			{
 				if ($item->audiofile && $item->videofile)
 				{
-					$this->playlist['audio'] = "{file:'" . SermonspeakerHelperSermonspeaker::makeLink($item->audiofile) . "'}";
+					$this->playlist['audio'] = "{file:'" . SermonspeakerHelperSermonspeaker::makeLink(addslashes($item->audiofile)) . "'}";
 					$this->playlist['video'] = "{file:'" . SermonspeakerHelperSermonspeaker::makeLink($item->videofile) . "'}";
 				}
 				else
@@ -367,7 +371,86 @@ class SermonspeakerHelperPlayerJwplayer6 extends SermonspeakerHelperPlayer
 			// $doc->addScriptDeclaration('jwplayer.key="put-key-here";');
 
 			$doc->addScriptDeclaration("function ss_play(id){jwplayer('mediaspace" . $this->config['count'] . "').playlistItem(id);}");
-
+			$eventTrigger = 
+			'
+			jQuery(document).ready(function(){
+			
+			   jwplayer().onPlay(function(event){
+			    	console.log("Play fired");
+			    	
+			    	var id = jwplayer().getPlaylistItem(jwplayer().getPlaylistIndex()).id;
+			    	console.log(id);
+			    	console.log("position = " +  jwplayer().getPosition());
+			    	
+			    	if (jwplayer().getPosition() < 1) {
+						jQuery.ajax({
+							
+						  type: "GET",
+						  url: "/index.php",
+						  data: "option=com_sermonspeaker&task=started&format=json&id="+ id,
+						  success: function(){ //(msg)
+							console.log( " +1 Ok " );
+							//console.log( msg );
+							
+							var count = +(jQuery("#ss-started" + id).text());
+							if (isNaN(count)) count = 0;
+							console.log( "count = "  + count);
+							count++;
+							jQuery("#ss-started" + id).text(count);
+							
+						  }
+						});
+			    	}
+			    	
+				});
+			   
+			   function updatestats(){
+					var id = jwplayer().getPlaylistItem(jwplayer().getPlaylistIndex()).id;
+						console.log(id);
+						jQuery.ajax({
+						  type: "GET",
+						  url: "/index.php",
+						  data: "option=com_sermonspeaker&task=complited&format=json&id="+ id,
+						  success: function(){ //(msg)
+							//console.log( msg );
+							console.log( " +1 Ok " );
+							
+							var count = +(jQuery("#ss-complited" + id).text());
+							if (isNaN(count)) count = 0;
+							console.log( "count = "  + count);
+							count++;
+							jQuery("#ss-complited" + id).text(count);
+							
+						  }
+						});
+			   }
+			   
+			   jwplayer().onComplete(function(event){
+			    	console.log("onComplete fired");
+			    	//updatestats();
+			    	
+			    	
+				}); 
+				
+				
+				jwplayer().onBeforeComplete(function(event){
+					console.log("onBeforeComplete fired");
+					jwplayer().stop();
+					updatestats();
+			    	
+				}); 
+				
+				jwplayer().onPause(function(event){
+			    	//console.log("Pause fired");
+				}); 
+				
+				jwplayer().onBuffer(function(event){
+			    	//console.log("onBuffer fired");
+				}); 
+				
+			});
+			';
+			$doc->addScriptDeclaration($eventTrigger);
 			if ($this->toggle)
 			{
 				$awidth = is_numeric($this->config['awidth']) ? $this->config['awidth'] . 'px' : $this->config['awidth'];

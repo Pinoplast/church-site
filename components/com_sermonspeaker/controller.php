@@ -138,7 +138,74 @@ class SermonspeakerController extends JControllerLegacy
 
 		return parent::display($cachable, $safeurlparams);
 	}
+	public function started() 
+	{
+		$this->input = JFactory::getApplication()->input;
+		$id          = $this->input->get('id', 0, 'int');
 
+	
+		if (!$id)
+		{
+			die("<html><body onload=\"alert('I have no clue what you want to download...');history.back();\" bgcolor=\"#F0F0F0\"></body></html>");
+		}
+		
+		 try
+		{
+		  	 
+		  $hits = $this->getModel('sermon')->getItem($id)->hits;
+		  $custom1 = $this->getModel('sermon')->getItem($id)->custom1;
+		  
+		   
+		  $sermon = JTable::getInstance('Sermon', 'SermonspeakerTable');
+		  $sermon->id = $id;
+		  $sermon->custom1 = $custom1 + 1;
+		  $sermon->store();
+	 
+		  echo new JResponseJson(array("hits"=>$hits, "custom1"=>$custom1) );
+		}
+		catch(Exception $e)
+		{
+		  echo new JResponseJson($e);
+		}
+		
+		//$db = JFactory::getDBO();
+		
+	}
+	
+	public function complited() 
+	{
+		$this->input = JFactory::getApplication()->input;
+		$id          = $this->input->get('id', 0, 'int');
+
+	
+		if (!$id)
+		{
+			die("<html><body onload=\"alert('I have no clue what you want to download...');history.back();\" bgcolor=\"#F0F0F0\"></body></html>");
+		}
+		
+		 try
+		{
+		  	 
+		  
+		  $custom2 = $this->getModel('sermon')->getItem($id)->custom2;
+		  
+		   
+		  $sermon = &JTable::getInstance('Sermon', 'SermonspeakerTable');
+		  $sermon->id = $id;
+		  $sermon->custom2 = $custom2 + 1;
+		  $sermon->store();
+	 
+		  echo new JResponseJson(array("custom2"=>$custom2) );
+		  
+		}
+		catch(Exception $e)
+		{
+		  echo new JResponseJson($e);
+		}
+		
+		//$db = JFactory::getDBO();
+		
+	}
 	public function download()
 	{
 		$this->input = JFactory::getApplication()->input;
@@ -146,54 +213,62 @@ class SermonspeakerController extends JControllerLegacy
 
 		if (!$id)
 		{
-			die("<html><body onload=\"alert('I have no clue what you want to download...');history.back();\"></body></html>");
+			die("<html><body onload=\"alert('I have no clue what you want to download...');history.back();\" bgcolor=\"#F0F0F0\"></body></html>");
 		}
 
-		$db       = JFactory::getDbo();
-		$nullDate = $db->quote($db->getNullDate());
-		$nowDate  = $db->quote(JFactory::getDate()->toSql());
-		$query    = $db->getQuery(true);
+		$db = JFactory::getDBO();
 
 		if ($this->input->get('type', 'audio', 'word') == 'video')
 		{
-			$query->select($db->quoteName('videofile'));
+			$query = "SELECT videofile FROM #__sermon_sermons WHERE id = " . $id;
 		}
 		else
 		{
-			$query->select($db->quoteName('audiofile'));
+		  $query = "
+		   SELECT  
+			   sermon.id,
+			   sermon.speaker_id, 
+			   speaker.title as speaker_title,
+			   sermon.audiofile, 
+			   sermon.title as sermon_title,
+			   sermon.sermon_date 
+			FROM 
+			   #__sermon_sermons as sermon,  
+			   #__sermon_speakers as speaker
+
+			WHERE (sermon.id = " . $id . ") AND (sermon.speaker_id = speaker.id)
+		";
+			//$query = "SELECT audiofile FROM #__sermon_sermons WHERE id = " . $id;
 		}
 
-		$query->from('#__sermon_sermons');
-		$query->where($db->quoteName('id') . ' = ' . $id);
-		$query->where($db->quoteName('state') . ' = 1');
-		$query->where('(publish_up = ' . $nullDate . ' OR publish_up <= ' . $nowDate . ')');
-		$query->where('(publish_down = ' . $nullDate . ' OR publish_down >= ' . $nowDate . ')');
-
 		$db->setQuery($query);
-		$result = $db->loadResult() or die ("<html><body onload=\"alert('I haven\'t found a valid file');
-			history.back();\"></body></html>");
-		$result = rtrim($result);
+		$result = $db->loadObject() or die ("<html><body onload=\"alert('Encountered an error while accessing the database'); history.back();\" bgcolor=\"#F0F0F0\"></body></html>");
+		$audiofile = rtrim($result->audiofile);
 
 		// Redirect if link goes to an external source
-		if (parse_url($result, PHP_URL_SCHEME))
+		if (parse_url($audiofile, PHP_URL_SCHEME))
 		{
-			$result = str_replace('http://player.vimeo.com/video/', 'http://vimeo.com/', $result);
-			$this->setRedirect($result);
+			$audiofile = str_replace('http://player.vimeo.com/video/', 'http://vimeo.com/', $audiofile);
+			$this->setRedirect($audiofile);
 
 			return;
 		}
 
 		// Replace \ with /
-		$result = str_replace('\\', '/', $result);
+		$audiofile = str_replace('\\', '/', $audiofile); // replace \ with /
 
 		// Add a leading slash to the sermonpath if not present
-		if (substr($result, 0, 1) != '/')
+		if (substr($audiofile, 0, 1) != '/')
 		{
-			$result = '/' . $result;
+			$audiofile = '/' . $audiofile;
 		}
 
-		$file = JPATH_ROOT . $result;
+		$file = JPATH_ROOT.$audiofile;
+		$filename = substr($result->sermon_date, 0, 10) . " " . $result->speaker_title . " - " . $result->sermon_title . "." . JFile::getExt($file);
 		$mime = SermonspeakerHelperSermonspeaker::getMime(JFile::getExt($file));
+		// echo "<br />".$filename;
+		// echo "<br />".$mime;
+		// exit();
 
 		if (ini_get('zlib.output_compression'))
 		{
@@ -213,7 +288,8 @@ class SermonspeakerController extends JControllerLegacy
 			header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
 			header('Cache-Control: private', false);
 			header('Content-Type: ' . $mime);
-			header('Content-Disposition: attachment; filename="' . basename($file) . '"');
+			//header('Content-Disposition: attachment; filename="' . JFile::getName($file) . '"');
+			header('Content-Disposition: attachment; filename="'.$filename.'"');
 			header('Content-Transfer-Encoding: binary');
 			header('Content-Length: ' . @filesize($file));
 			set_time_limit(0);
@@ -231,6 +307,8 @@ class SermonspeakerController extends JControllerLegacy
 					die("Can't open the file!");
 				}
 
+				$buffer = '';
+
 				while (!feof($handle))
 				{
 					$buffer = fread($handle, $chunksize);
@@ -240,17 +318,30 @@ class SermonspeakerController extends JControllerLegacy
 				}
 
 				fclose($handle);
+				// Update Statistic //onivan
+				  $hits = $this->getModel('sermon')->getItem($id)->hits;
+				  $sermon = &JTable::getInstance('Sermon', 'SermonspeakerTable');
+				  $sermon->id = $id;
+				  $sermon->hits = $hits + 1;
+				  $sermon->store();
+	
 			}
 			else
 			{
 				@readfile($file) or die('Unable to read file!');
+				// Update Statistic //onivan
+				  $hits = $this->getModel('sermon')->getItem($id)->hits;
+				  $sermon = &JTable::getInstance('Sermon', 'SermonspeakerTable');
+				  $sermon->id = $id;
+				  $sermon->hits = $hits + 1;
+				  $sermon->store();
 			}
 
 			exit;
 		}
 		else
 		{
-			die("<html><body onload=\"alert('File not found!');history.back();\"></body></html>");
+			die("<html><body OnLoad=\"alert('File not found!');history.back();\" bgcolor=\"#F0F0F0\"></body></html>");
 		}
 	}
 }

@@ -328,6 +328,7 @@ class SermonspeakerModelSermons extends JModelList
 		$this->setState('filter.language', $app->getLanguageFilter());
 
 		$limit = (int) $params->get('limit', '');
+		//echo "l {$limit}, ";
 
 		if ($limit)
 		{
@@ -341,6 +342,10 @@ class SermonspeakerModelSermons extends JModelList
 			$search = $app->getUserStateFromRequest($this->context . '.filter.search', 'filter-search', '', 'STRING');
 			$this->setState('filter.search', $search);
 
+			// Speaker filter
+			$speaker_id	= $app->getUserStateFromRequest($this->context . '.speaker.id', 'speaker', 0, 'INT');
+			//echo "s {$speaker_id}, PS ". $_POST["speaker"] . ", ";
+			$this->setState('speaker.id', $speaker_id);
 			// Scripture filter
 			$book = $app->getUserStateFromRequest($this->context . '.scripture.book', 'book', 0, 'INT');
 			$this->setState('scripture.book', $book);
@@ -473,6 +478,37 @@ class SermonspeakerModelSermons extends JModelList
 		return $options;
 	}
 
+	/**
+	 * Method to get the available speakers
+	 *
+	 * @return  array  Array of speakers
+	 */
+	public function getSpeakers()
+	{
+		$db	= $this->getDbo();
+		$query	= $db->getQuery(true);
+		$query->select('`id`');
+		$query->select('`title`');
+		$query->select('`ordering`');
+		$query->select('`hits`');
+		$query->from('`#__sermon_speakers`');
+		//$query->where("`sermon_date` != '0000-00-00'");
+
+		// Filter by state
+		$state = $this->getState('filter.state');
+
+		if (is_numeric($state))
+		{
+			$query->where('state = ' . (int) $state);
+		}
+
+		$query->order('`hits` DESC');
+
+		$db->setQuery($query, 0);
+		$options = $db->loadAssocList();
+
+		return $options;
+	}
 	/**
 	 * Method to get the available books
 	 *

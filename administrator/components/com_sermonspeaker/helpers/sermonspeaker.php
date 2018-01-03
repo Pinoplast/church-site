@@ -162,4 +162,55 @@ class SermonspeakerHelper
 
 		return isset($mapping[$section]) ? $mapping[$section] : null;
 	}
+
+	
+	/**
+	 * Get MIME type for extension
+	 *
+	 * @param   string  $ext  File extension
+	 *
+	 * @return  string  MIME type
+	 */
+	public static function getMime($ext)
+	{
+		switch ($ext)
+		{
+			case 'mp3':
+				$mime = 'audio/mpeg';
+				break;
+			case 'aac':
+				$mime = 'audio/aac';
+				break;
+			case 'm4a':
+				$mime = 'audio/mp4a-latm';
+				break;
+			case 'flv':
+				$mime = 'video/x-flv';
+				break;
+			case 'mp4':
+			case 'f4v':
+				$mime = 'video/mp4';
+				break;
+			case 'm4v':
+				$mime = 'video/m4v';
+				break;
+			case 'mov':
+				$mime = 'video/quicktime';
+				break;
+			case '3gp':
+				$mime = 'video/3gpp';
+				break;
+			case '3g2':
+				$mime = 'video/3gpp2';
+				break;
+			case 'pdf':
+				$mime = 'application/pdf';
+				break;
+			default:
+				$mime = 'video/mp4';
+				break;
+		}
+
+		return $mime;
+	}
 }

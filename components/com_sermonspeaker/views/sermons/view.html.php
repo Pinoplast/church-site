@@ -35,6 +35,7 @@ class SermonspeakerViewSermons extends JViewLegacy
 		$this->items      = $this->get('Items');
 		$this->pagination = $this->get('Pagination');
 		$this->years      = $this->get('Years');
+		$this->speakers	= $this->get('Speakers');
 		$this->months     = $this->get('Months');
 		$books            = $this->get('Books');
 
@@ -50,6 +51,7 @@ class SermonspeakerViewSermons extends JViewLegacy
 		// Add filter to pagination, needed since it's no longer stored in userState.
 		$this->pagination->setAdditionalUrlParam('year', $this->state->get('date.year'));
 		$this->pagination->setAdditionalUrlParam('month', $this->state->get('date.month'));
+		$this->pagination->setAdditionalUrlParam('speaker', $this->state->get('speaker.id'));
 		$this->params = $this->state->get('params');
 
 		if ((int) $this->params->get('limit', ''))
@@ -135,6 +137,9 @@ class SermonspeakerViewSermons extends JViewLegacy
 		}
 
 		$js = 'function clear_all(){
+			if(document.getElementById(\'filter_speaker\')){
+				document.getElementById(\'filter_speaker\').value=0;
+			}
 			if(document.getElementById(\'filter_books\')){
 				document.getElementById(\'filter_books\').value=0;
 			}

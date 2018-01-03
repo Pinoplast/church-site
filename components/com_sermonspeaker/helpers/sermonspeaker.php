@@ -228,7 +228,7 @@ class SermonspeakerHelperSermonspeaker
 				$onclick = "onclick=\"ga('send', 'event', 'SermonSpeaker Download', '" . $type . "', 'id:" . $id . "');\"";
 			}
 
-			$html = '<a href="' . $fileurl . '" target="_blank" ' . $onclick . ' class="hasTooltip" title="::' . $text . '">'
+			$html = '<a rel="nofollow" href="' . $fileurl . '" target="_blank" ' . $onclick . ' class="hasTooltip" title="::' . $text . '">'
 				. '<img src="media/com_sermonspeaker/images/download.png" alt="' . $text . '" />'
 				. '</a>';
 		}
@@ -251,7 +251,7 @@ class SermonspeakerHelperSermonspeaker
 				$onclick = "onclick=\"ga('send', 'event', 'SermonSpeaker Download', '" . $type . "', 'id:" . $id . "');\"";
 			}
 
-			$html = '<a href="' . $fileurl . '" target="_blank" ' . $onclick . ' class="hasTooltip" title="' . $text . '">'
+			$html = '<a rel="nofollow" href="' . $fileurl . '" target="_blank" ' . $onclick . ' class="hasTooltip" title="' . $text . '">'
 				. '<i class="icon-download"> </i>'
 				. '</a>';
 		}
@@ -263,7 +263,7 @@ class SermonspeakerHelperSermonspeaker
 				$onclick = "onclick=\"ga('send', 'event', 'SermonSpeaker Download', '" . $type . "', 'id:" . $id . "');\"";
 			}
 
-			$html = '<a href="' . $fileurl . '" target="_blank" ' . $onclick . ' class="download">' . $text . '</a>';
+			$html = '<a rel="nofollow" href="' . $fileurl . '" target="_blank" ' . $onclick . ' class="download">' . $text . '</a>';
 		}
 		else
 		{
@@ -832,7 +832,7 @@ class SermonspeakerHelperSermonspeaker
 					break;
 				case 0:
 				default:
-					$config['alt_player'] = 'jwplayer5';
+					$config['alt_player'] = 'jwplayer6';
 					break;
 			}
 		}
@@ -840,13 +840,13 @@ class SermonspeakerHelperSermonspeaker
 		// Dispatching
 		if (!JFile::exists(JPATH_SITE . '/components/com_sermonspeaker/helpers/player/' . $config['alt_player'] . '.php'))
 		{
-			$config['alt_player'] = 'jwplayer5';
+			$config['alt_player'] = 'jwplayer6';
 		}
 
 		require_once JPATH_SITE . '/components/com_sermonspeaker/helpers/player/' . $config['alt_player'] . '.php';
 		$classname = 'SermonspeakerHelperPlayer' . ucfirst($config['alt_player']);
 
-		/* @var  SermonspeakerHelperPlayerJwplayer5 $player Default player class is JW Player, but can be any other */
+		/* @var  SermonspeakerHelperPlayerJwplayer6 $player Default player class is JW Player, but can be any other */
 		$player = new $classname;
 
 		if (is_array($item))
@@ -891,14 +891,14 @@ class SermonspeakerHelperSermonspeaker
 			else
 			{
 				// Try with JW Player
-				if ($config['alt_player'] != 'jwplayer5')
+				if ($config['alt_player'] != 'jwplayer6')
 				{
-					require_once JPATH_SITE . '/components/com_sermonspeaker/helpers/player/jwplayer5.php';
-					$player = new SermonspeakerHelperPlayerJwplayer5;
+					require_once JPATH_SITE . '/components/com_sermonspeaker/helpers/player/jwplayer6.php';
+					$player = new SermonspeakerHelperPlayerJwplayer6;
 
 					if ($player->isSupported($file))
 					{
-						$config['alt_player'] = 'jwplayer5';
+						$config['alt_player'] = 'jwplayer6';
 
 						// Prepare player
 						$player->preparePlayer($item, $config);
@@ -914,7 +914,7 @@ class SermonspeakerHelperSermonspeaker
 				{
 					$playername = JFile::stripExt(basename($classfile));
 
-					if ($playername == 'jwplayer5' || $playername == $config['alt_player'])
+					if ($playername == 'jwplayer6' || $playername == $config['alt_player'])
 					{
 						continue;
 					}
