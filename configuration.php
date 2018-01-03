@@ -50,14 +50,14 @@ class JConfig {
 	public $MetaAuthor = '1';
 	public $MetaVersion = '0';
 	public $robots = '';
-	public $sef = '1';
+	public $sef = '0';
 	public $sef_rewrite = '0';
 	public $sef_suffix = '0';
 	public $unicodeslugs = '0';
 	public $feed_limit = '10';
 	public $feed_email = 'none';
-	public $log_path = 'logs';
-	public $tmp_path = 'tmp';
+	public $log_path = '/home/ivo/wwwloc2/log';
+	public $tmp_path = '/home/ivo/wwwloc2/tmp';
 	public $lifetime = '120';
 	public $session_handler = 'database';
 	public $shared_session = '0';
